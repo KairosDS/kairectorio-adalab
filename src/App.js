@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.scss';
+import Kairectory from './components/Kairectory/kairectory';
+
 
 const db = {
   "categories": ["kairos", "laboral", "desarrollo", "agile"],
@@ -77,19 +79,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-         <ul className="list">
-        {/* { db.categories.map(item => {
-          return (
-           <li className="list__item">
-             {item}
-           </li>
-          ); */}
-
-        
-         </ul>
-       
-
-
+        <Kairectory db={db} />
       </div>
     );
   }
