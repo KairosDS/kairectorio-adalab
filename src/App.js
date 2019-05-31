@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.scss';
-import Kairectory from './components/Kairectory/kairectory';
+import Home from "./components/Home/Home";
 
 
 const db = {
@@ -79,7 +79,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Kairectory db={db} />
+        <Home db={db} />
       </div>
     );
   }
