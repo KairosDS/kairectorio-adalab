@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.scss';
 import Kairectory from './components/Kairectory/kairectory';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 
 const db = {
@@ -79,7 +81,9 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <Header />
         <Kairectory db={db} />
+        <Footer />
       </div>
     );
   }

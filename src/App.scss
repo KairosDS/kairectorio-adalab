@@ -1,28 +1,9 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
-@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,700");
-
-.main-header {
-  width: 100%;
-  height: 88px;
-}
-
-.main-header__logo {
-  max-width: 1400px;
-}
-
-.logo__img {
-  padding: 1.2rem 0.7rem;
-  width: 9rem;
-}
-
 .main {
   font-family: "Open Sans", sans-serif;
   /* header 88 y footer 3 */
   min-height: calc(100vh - 88px - 3rem);
   background-color: #e8e8e8;
 }
-
 .main__hero {
   width: 100%;
   background-image: linear-gradient(
@@ -38,16 +19,6 @@
 .main__hero--wrapper {
   padding: 3rem 0 0 2rem;
   max-width: 1400px;
-}
-
-.main__hero--masinfo {
-  text-align: right;
-  padding: 1em;
-  color: #FFF;
-}
-.main__hero--masinfo a {
-  color:#000000;
-  font-weight:bolder;
 }
 
 .wrapper__motto {
