@@ -5,17 +5,20 @@ class Kairectory extends React.Component {
     render() {
         const {db} = this.props;
         return (
+          <div>
             <ul className="list">
             {db.categories.map((item, index) => {
               return (
+
                <li className="list__item" key={index}>
                 {item}
                 <Resources db={db}/>
                </li>
               )})
               }
-             </ul>
+            </ul>
+          </div>
         );
     }
 }
-export default Kairectory; 
+export default Kairectory;
