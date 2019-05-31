@@ -1,4 +1,5 @@
 import React from 'react';
+import Resources from '../Resources/Resources';
 
 class Kairectory extends React.Component {
     render() {
@@ -8,7 +9,8 @@ class Kairectory extends React.Component {
             {db.categories.map((item, index) => {
               return (
                <li className="list__item" key={index}>
-                 {item}
+                {item}
+                <Resources db={db}/>
                </li>
               )})
               }
