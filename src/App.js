@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.scss';
-import Kairectory from './components/Kairectory/kairectory';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import Home from "./components/Home/Home";
 
 
 const db = {
@@ -82,7 +82,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header />
-        <Kairectory db={db} />
+        <Home db={db} />
         <Footer />
       </div>
     );
