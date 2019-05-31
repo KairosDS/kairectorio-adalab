@@ -1,6 +1,5 @@
-const express = require('express');
-const app = express();
-const PORT = 3000;
+import React from 'react';
+import './App.scss';
 
 const db = {
   "categories": ["kairos", "laboral", "desarrollo", "agile"],
@@ -52,22 +51,48 @@ const db = {
   }
 }
 
-app.get('/', function (req, res) {
-	res.json({ "kairectorio": "API REST" });
-});
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      categories: []
+    }
+  }
+  
+  // fetchCategories () {
+  //   const newUrl= url + 'categories';
+  //   fetch(newUrl)
+  //     .then(response => response.json())
+  //     .then(data => {
+  //       this.setState({
+  //         categories : data
+  //       })
+  //     })
+  // }
 
-app.get('/categories', function (req, res) {
-  let result = db.categories;
-	res.json(result);
-});
+  // componentDidMount () {
+  //   this.fetchCategories()
+  // }
+ 
+  render() {
+    return (
+      <div className="App">
+         <ul className="list">
+        {/* { db.categories.map(item => {
+          return (
+           <li className="list__item">
+             {item}
+           </li>
+          ); */}
 
-app.get('/resources/:category', function (req, res) {
-  let category = req.params.category
-  let result = db.resources[category];
-	res.json(result);
-});
+        
+         </ul>
+       
 
-app.listen(PORT, function () {
-	console.log('Your node js server is running on PORT:', PORT);
-});
 
+      </div>
+    );
+  }
+}
+
+export default App;
