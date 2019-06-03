@@ -30,25 +30,25 @@ class App extends React.Component {
       })
   }
 
-  // fetchResourcesKairos() {
-  //   const url = 'http://localhost:4000/';
+  fetchResourcesKairos() {
+    const url = 'http://localhost:4000/';
 
-  //   const newUrl= url + 'resources/kairos';
-  //   console.log(newUrl);
-  //   fetch(newUrl)
-  //     .then(response => response.json())
-  //     .then(data => {
-  //       this.setState({
-  //         kairos : data
-  //       })
-  //       console.log(this.state.kairos);
-  //     })
+    const newUrl= url + 'resources/kairos';
+    console.log(newUrl);
+    fetch(newUrl)
+      .then(response => response.json())
+      .then(data => {
+        this.setState({
+          kairos : data
+        })
+        console.log(this.state.kairos);
+      })
 
-  // }
+  }
 
   componentDidMount () {
     this.fetchCategories();
-    // this.fetchResourcesKairos()
+    this.fetchResourcesKairos()
   }
 
   render() {

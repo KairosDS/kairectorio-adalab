@@ -12,7 +12,7 @@ class Kairectory extends React.Component {
 
                <li className="list__item" key={index}>
                 {item}
-                {/* <Resources kairos={kairos}/> */}
+                <Resources kairos={kairos}/>
                </li>
               )})
               }
