@@ -3,16 +3,16 @@ import Resources from '../Resources/Resources';
 
 class Kairectory extends React.Component {
     render() {
-        const {db} = this.props;
+        const {categories, kairos} = this.props;
         return (
           <div>
             <ul className="list">
-            {db.map((item, index) => {
+            {categories.map((item, index) => {
               return (
 
                <li className="list__item" key={index}>
                 {item}
-                {/* <Resources db={db}/> */}
+                {/* <Resources kairos={kairos}/> */}
                </li>
               )})
               }

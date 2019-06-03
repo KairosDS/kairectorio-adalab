@@ -6,16 +6,18 @@ import Home from "./components/Home/Home";
 
 
 
+
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      categories: []
+      categories: [],
+      kairos: []
     }
   }
-  
+
   fetchCategories () {
-    const url = 'http://localhost:4000/'
+    const url = 'http://localhost:4000/';
     const newUrl= url + 'categories';
     console.log(newUrl);
     fetch(newUrl)
@@ -28,15 +30,33 @@ class App extends React.Component {
       })
   }
 
+  // fetchResourcesKairos() {
+  //   const url = 'http://localhost:4000/';
+
+  //   const newUrl= url + 'resources/kairos';
+  //   console.log(newUrl);
+  //   fetch(newUrl)
+  //     .then(response => response.json())
+  //     .then(data => {
+  //       this.setState({
+  //         kairos : data
+  //       })
+  //       console.log(this.state.kairos);
+  //     })
+
+  // }
+
   componentDidMount () {
-    this.fetchCategories()
+    this.fetchCategories();
+    // this.fetchResourcesKairos()
   }
- 
+
   render() {
+    const {categories, kairos}= this.state;
     return (
       <div className="App">
         <Header />
-        <Home db={this.state.categories} />
+        <Home cagetories={categories} kairos= {kairos} />
         <Footer />
       </div>
     );
