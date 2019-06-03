@@ -12,22 +12,18 @@ class Card extends React.Component {
         .filter(item => item.title.includes(id) ? item : false)
         .map((item, index) => {
           return (
-            <article className="directory__wrapper--card" key={index}>
-              <a className="main__directory--link" target="_blank" rel="noopener noreferrer" href={item.url}>
-                <div className="card__wrapper">
-                  <div className="card__icon">
-                    <i className="far fa-clock"></i>
+            <div className="card__container">
+              <h3 className="card__title">{item.title}</h3>
+              <article className="directory__wrapper--card" key={index}>
+                  <div className="card__wrapper">
+                    <div className="card__icon">
+                      <i className="far fa-clock"></i>
+                    </div>
+                    <p className="card__description">{item.description}</p>
                   </div>
-                  <h3 className="card__title">
-                  {item.title}
-                  </h3>
-                  <p className="card__description">
-                  {item.description}
-                  </p>
-                </div>
-              </a>
-          </article>
-
+                  <a className="main__directory--link" target="_blank" rel="noopener noreferrer" href={item.url}>{item.url}</a>
+              </article>
+            </div>
         )
       })}
       </div>

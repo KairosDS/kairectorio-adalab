@@ -1,0 +1,40 @@
+.resources__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.list__category {
+  width: 210px;
+  height: 16rem;
+  border: #ff7900 solid 5px;
+  background-color: #ffffff;
+  margin: 1.5rem 0.7rem;
+  padding: 1.5rem 0;
+  text-align: center;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.btn__detail {
+  background: #ff7900;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  border: 3px solid white;
+  &:hover{
+    background: white;
+    color: #ff7900;
+    border: 3px solid #ff7900;
+  }
+}
+
+.description {
+  padding: 0 20px;
+}

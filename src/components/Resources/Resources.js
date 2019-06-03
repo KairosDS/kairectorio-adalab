@@ -5,7 +5,6 @@ import './Resources.scss';
 class Resources extends React.Component {
   render(){
     const {kairos} = this.props;
-    console.log('hola');
 
     return(
       <ul className="resources__list">
@@ -13,9 +12,7 @@ class Resources extends React.Component {
           return(
             <li className="list__category" key={index}>
               <h2 className="title">{item.title}</h2>
-              <p className="description">{item.description}</p>
-
-              <Link className="btn__detail" to={`/card/${item.title}`}>Pincha aquí para más información</Link>
+              <Link className="btn__detail" to={`/card/${item.title}`}>Más información</Link>
             </li>
           )
         })}
