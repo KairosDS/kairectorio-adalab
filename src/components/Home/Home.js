@@ -7,7 +7,7 @@ class Home extends React.Component {
   render() {
     const { categories, kairos } = this.props;
     return (
-      <main className="main">
+      <div className="home">
         <section className="main__hero">
           <div className="main__hero--wrapper">
             <h1 className="wrapper__motto">#IT'S YOUR TIME</h1>
@@ -16,10 +16,8 @@ class Home extends React.Component {
             </h2>
           </div>
         </section>
-        <section className="main__directory">
-          <Kairectory categories={categories} kairos= {kairos} />
-        </section>
-      </main>
+        <section className="main__directory" />
+      </div>
     );
   }
 }

@@ -1,25 +1,22 @@
-import React from 'react';
-import Resources from '../Resources/Resources';
-import './Kairectory.scss';
+import React from "react";
+import { Link } from "react-router-dom";
 
 class Kairectory extends React.Component {
-    render() {
-        const {categories, kairos} = this.props;
+  render() {
+    const {categories, kairos} = this.props;
         return (
-          <div>
-            <ul className="list">
-            {categories.map((item, index) => {
-              return (
-
-               <li className="list__item" key={index}>
-                {item}
-                <Resources kairos={kairos}/>
-               </li>
-              )})
-              }
-            </ul>
-          </div>
-        );
-    }
+      <div>
+        <ul className="list">
+          {categories.map((item, index) => {
+            return (
+              <li className="list__item" key={index}>
+                <Link to={`/resources/${item}`}>{item}</Link>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    );
+  }
 }
 export default Kairectory;
