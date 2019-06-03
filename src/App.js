@@ -13,6 +13,9 @@ class App extends React.Component {
     this.state = {
       categories: [],
       kairos: [],
+      laboral: [],
+      desarrollo: [],
+      agile: []
 
     };
   }
@@ -23,28 +26,32 @@ class App extends React.Component {
     fetch(newUrl)
       .then(response => response.json())
       .then(data => {
+        
         this.setState({
           categories: data
         });
       });
   }
 
-  fetchResourcesKairos() {
+  fetchResources(category) {
     const url = "http://localhost:4000/";
-
-    const newUrl = url + "resources/kairos";
+    const resources = "resources/";
+    const newUrl = url + resources + category;
     fetch(newUrl)
       .then(response => response.json())
       .then(data => {
         this.setState({
-          kairos: data
+          [category] : data
         });
       });
   }
 
   componentDidMount() {
     this.fetchCategories();
-    this.fetchResourcesKairos();
+    this.fetchResources('kairos');
+    this.fetchResources('laboral');
+    this.fetchResources('desarrollo');
+    this.fetchResources('agile');
   }
 
   render() {
