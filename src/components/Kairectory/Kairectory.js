@@ -3,15 +3,14 @@ import { Link } from "react-router-dom";
 
 class Kairectory extends React.Component {
   render() {
-    const { db } = this.props;
-    console.log(db);
-    return (
+    const {categories, kairos} = this.props;
+        return (
       <div>
         <ul className="list">
-          {db.categories.map((item, index) => {
+          {categories.map((item, index) => {
             return (
               <li className="list__item" key={index}>
-                <Link to={`/kairectorio/recursos/${item}`}>{item}</Link>
+                <Link to={`/resources/${item}`}>{item}</Link>
               </li>
             );
           })}

@@ -8,81 +8,51 @@ import Kairectory from "./components/Kairectory/Kairectory";
 import Resources from "./components/Resources/Resources";
 import Card from "./components/Card/Card";
 
-const db = {
-  categories: ["kairos", "laboral", "desarrollo", "agile"],
-  resources: {
-    kairos: [
-      {
-        title: "calendario laboral",
-        description: "Calendario laboral del año en curso",
-        masinfo: "",
-        url:
-          "https://www.calendarioslaborales.com/calendario-laboral-madrid-2019.htm"
-      },
-      {
-        title: "",
-        description: "",
-        masinfo: "",
-        url: ""
-      },
-      {
-        title: "",
-        description: "",
-        masinfo: "",
-        url: ""
-      }
-    ],
-    laboral: [
-      {
-        title: "",
-        description: "",
-        masinfo: "",
-        url: ""
-      }
-    ],
-    desarrollo: [
-      {
-        title: "",
-        description: "",
-        masinfo: "",
-        url: ""
-      }
-    ],
-    agile: [
-      {
-        title: "",
-        description: "",
-        masinfo: "",
-        url: ""
-      }
-    ]
-  }
-};
-
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      categories: []
+      categories: [],
+      kairos: []
     };
   }
 
-  // fetchCategories () {
-  //   const newUrl= url + 'categories';
-  //   fetch(newUrl)
-  //     .then(response => response.json())
-  //     .then(data => {
-  //       this.setState({
-  //         categories : data
-  //       })
-  //     })
-  // }
+  fetchCategories() {
+    const url = "http://localhost:4000/";
+    const newUrl = url + "categories";
+    console.log(newUrl);
+    fetch(newUrl)
+      .then(response => response.json())
+      .then(data => {
+        this.setState({
+          categories: data
+        });
+        console.log(this.state.categories);
+      });
+  }
 
-  // componentDidMount () {
-  //   this.fetchCategories()
-  // }
+  fetchResourcesKairos() {
+    const url = "http://localhost:4000/";
+
+    const newUrl = url + "resources/kairos";
+    console.log(newUrl);
+    fetch(newUrl)
+      .then(response => response.json())
+      .then(data => {
+        this.setState({
+          kairos: data
+        });
+        console.log(this.state.kairos);
+      });
+  }
+
+  componentDidMount() {
+    this.fetchCategories();
+    this.fetchResourcesKairos();
+  }
 
   render() {
+    const { categories, kairos } = this.state;
     return (
       <div className="App">
         <Header />
@@ -91,19 +61,30 @@ class App extends React.Component {
             <Route exact path="/" component={Home} />
             <Route
               path="/kairectorio"
-              render={props => <Kairectory db={db} />}
+              render={props => (
+                <Kairectory categories={categories} kairos={kairos} />
+              )}
             />
-            {
               <Route
-                path="/kairectorio/recursos/:id-categoria"
-                render={props => <Resources match={props.match} db={db} />}
+                path="/resources/:id-categoria"
+                render={props => (
+                  <Resources
+                    match={props.match}
+                    categories={categories}
+                    kairos={kairos}
+                  />
+                )}
               />
-            }
             <Route
               path="/kairectorio/recursos/:id"
-              render={props => <Card match={props.match} db={db} />}
-            />{" "}
-            */}
+              render={props => (
+                <Card
+                  match={props.match}
+                  categories={categories}
+                  kairos={kairos}
+                />
+              )}
+            />
           </Switch>
         </main>
         <Footer />

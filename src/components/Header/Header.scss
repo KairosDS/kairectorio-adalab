@@ -3,6 +3,9 @@
   height: 88px;
   .main-header__logo {
     max-width: 1400px;
+    @media all and (min-width: 1200px){
+      margin: 0 auto;
+    }
   }
   .logo__img {
     padding: 1.2rem 0.7rem;
