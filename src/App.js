@@ -18,6 +18,7 @@ class App extends React.Component {
       agile: []
 
     };
+    this.fetchResources = this.fetchResources.bind(this);
   }
 
   fetchCategories() {
@@ -26,7 +27,7 @@ class App extends React.Component {
     fetch(newUrl)
       .then(response => response.json())
       .then(data => {
-        
+
         this.setState({
           categories: data
         });
@@ -48,14 +49,10 @@ class App extends React.Component {
 
   componentDidMount() {
     this.fetchCategories();
-    this.fetchResources('kairos');
-    this.fetchResources('laboral');
-    this.fetchResources('desarrollo');
-    this.fetchResources('agile');
   }
 
   render() {
-    const { categories, kairos } = this.state;
+    const { categories, kairos, laboral, desarrollo, agile } = this.state;
     return (
       <div className="App">
         <Header />
@@ -71,9 +68,13 @@ class App extends React.Component {
                 path="/resources/:category"
                 render={props => (
                   <Resources
+                    fetchResources = {this.fetchResources}
                     match={props.match}
                     categories={categories}
                     kairos={kairos}
+                    laboral={laboral}
+                    desarrollo={desarrollo}
+                    agile={agile}
                   />
                 )}
               />
