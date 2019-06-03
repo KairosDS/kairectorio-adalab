@@ -34,6 +34,7 @@ class Resources extends React.Component {
     console.log(chosenCategory);
     return(
       <ul className="resources__list">
+
         {chosenCategory.map((item,index) => {
           return (
           <li className="list__item" key={index}>

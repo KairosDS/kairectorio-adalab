@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Kairectory.scss";
 
 class Kairectory extends React.Component {
   render() {
@@ -10,7 +11,7 @@ class Kairectory extends React.Component {
           {categories.map((item, index) => {
             return (
               <li className="list__item" key={index}>
-                <Link to={`/resources/${item}`}>{item}</Link>
+                <Link className="category__link" to={`/resources/${item}`}>{item}</Link>
               </li>
             );
           })}

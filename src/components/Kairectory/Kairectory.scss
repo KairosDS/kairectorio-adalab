@@ -1,0 +1,26 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.list__item {
+  width: 210px;
+  height: 16rem;
+  border: #ff7900 solid 5px;
+  background-color: #ffffff;
+  margin: 1.5rem 0.7rem;
+  padding: 1.5rem 0;
+  text-align: center;
+  border-radius: 1rem;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category__link {
+  color: #575756;
+  font-weight: bold;
+  font-size:24px;
+}
