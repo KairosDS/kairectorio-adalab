@@ -11,7 +11,7 @@ class Resources extends React.Component {
       <ul className="resources__list">
         {kairos.map((item,index) => {
           return(
-            <li className="list__item" key={index}>
+            <li className="list__category" key={index}>
               <h2 className="title">{item.title}</h2>
               <p className="description">{item.description}</p>
 
