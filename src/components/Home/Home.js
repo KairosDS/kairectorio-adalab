@@ -3,7 +3,7 @@ import Kairectory from "../Kairectory/Kairectory";
 
 class Home extends React.Component {
   render() {
-    const { db } = this.props;
+    const { categories, kairos } = this.props;
     return (
       <main className="main">
         <section className="main__hero">
@@ -15,7 +15,7 @@ class Home extends React.Component {
           </div>
         </section>
         <section className="main__directory">
-          <Kairectory db={db} />
+          <Kairectory categories={categories} kairos= {kairos} />
         </section>
       </main>
     );
