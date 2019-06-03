@@ -56,7 +56,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header />
-        <Home cagetories={categories} kairos= {kairos} />
+        <Home categories={categories} kairos= {kairos} />
         <Footer />
       </div>
     );
