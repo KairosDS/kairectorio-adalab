@@ -20,34 +20,31 @@ class Resources extends React.Component {
       const {match} = this.props;
       const category = match.params.category;
       if(category === 'kairos') {
-        return 'kairos';
+        return kairos;
       } else if (category === 'laboral'){
-        return 'laboral';
+        return laboral;
       } else if (category === 'desarrollo'){
-        return 'desarrollo';
+        return desarrollo;
       } else {
-        return 'agile';
+        return agile;
       }
     }
 
+    const chosenCategory = chooseCategory();
+    console.log(chosenCategory);
     return(
-      <div>
-        {chooseCategory()}
-      </div>
+      <ul className="resources__list">
+        {chosenCategory.map((item,index) => {
+          return (
+          <li className="list__item" key={index}>
+            <h2 className="title">{item.title}</h2>
+            <p className="description">{item.description}</p>
 
-      // <ul className="resources__list">
-      // {kairos.map((item,index) => {
-      //   return(
-      //     <li className="list__item" key={index}>
-      //       <h2 className="title">{item.title}</h2>
-      //       <p className="description">{item.description}</p>
-
-      //       <Link className="btn__detail" to={`/card/${item.title}`}>Pincha aquí para más información</Link>
-      //     </li>
-      //     )
-      //   })}
-      // </ul>
-
+            <Link className="btn__detail" to={`/card/${item.title}`}>Pincha aquí para más información</Link>
+          </li>
+          )
+        })}
+      </ul>
     )
   }
 }
