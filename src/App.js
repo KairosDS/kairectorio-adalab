@@ -20,7 +20,6 @@ class App extends React.Component {
   fetchCategories() {
     const url = "http://localhost:4000/";
     const newUrl = url + "categories";
-    console.log(newUrl);
     fetch(newUrl)
       .then(response => response.json())
       .then(data => {
@@ -35,7 +34,6 @@ class App extends React.Component {
     const url = "http://localhost:4000/";
 
     const newUrl = url + "resources/kairos";
-    console.log(newUrl);
     fetch(newUrl)
       .then(response => response.json())
       .then(data => {
@@ -66,7 +64,7 @@ class App extends React.Component {
               )}
             />
               <Route
-                path="/resources/:id-categoria"
+                path="/resources/:category"
                 render={props => (
                   <Resources
                     match={props.match}
