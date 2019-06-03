@@ -5,7 +5,7 @@ class Home extends React.Component {
   render() {
     const { db } = this.props;
     return (
-      <main className="main">
+      <div className="home">
         <section className="main__hero">
           <div className="main__hero--wrapper">
             <h1 className="wrapper__motto">#IT'S YOUR TIME</h1>
@@ -14,10 +14,8 @@ class Home extends React.Component {
             </h2>
           </div>
         </section>
-        <section className="main__directory">
-          <Kairectory db={db} />
-        </section>
-      </main>
+        <section className="main__directory" />
+      </div>
     );
   }
 }

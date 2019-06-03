@@ -1,24 +1,23 @@
-import React from 'react';
-import Resources from '../Resources/Resources';
+import React from "react";
+import { Link } from "react-router-dom";
 
 class Kairectory extends React.Component {
-    render() {
-        const {db} = this.props;
-        return (
-          <div>
-            <ul className="list">
-            {db.categories.map((item, index) => {
-              return (
-
-               <li className="list__item" key={index}>
-                {item}
-                <Resources db={db}/>
-               </li>
-              )})
-              }
-            </ul>
-          </div>
-        );
-    }
+  render() {
+    const { db } = this.props;
+    console.log(db);
+    return (
+      <div>
+        <ul className="list">
+          {db.categories.map((item, index) => {
+            return (
+              <li className="list__item" key={index}>
+                <Link to={`/kairectorio/recursos/${item}`}>{item}</Link>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    );
+  }
 }
 export default Kairectory;

@@ -2,7 +2,8 @@ import React from 'react';
 
 class Resources extends React.Component {
   render(){
-    const {db} = this.props;
+    const {db, match} = this.props;
+    console.log(match.params);
 
     return(
       <ul className="resources__list">
