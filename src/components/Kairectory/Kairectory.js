@@ -10,9 +10,14 @@ class Kairectory extends React.Component {
         <ul className="list">
           {categories.map((item, index) => {
             return (
-              <li className="list__item" key={index}>
-                <Link className="category__link" to={`/resources/${item}`}>{item}</Link>
-              </li>
+              <Link className="category__link" to={`/resources/${item}`}>
+                <li className="list__item" key={index}>
+                  <h3 className="kaire__title">{item}</h3>
+                  <div className="icon__container">
+                    <i class="fas fa-chevron-right"></i>                  
+                  </div>
+                </li>
+              </Link>
             );
           })}
         </ul>

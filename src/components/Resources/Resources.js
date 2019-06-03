@@ -34,13 +34,11 @@ class Resources extends React.Component {
     console.log(chosenCategory);
     return(
       <ul className="resources__list">
-
         {chosenCategory.map((item,index) => {
           return (
           <li className="list__item" key={index}>
             <h2 className="title">{item.title}</h2>
             <p className="description">{item.description}</p>
-
             <Link className="btn__detail" to={`/card/${item.title}`}>Pincha aquí para más información</Link>
           </li>
           )
