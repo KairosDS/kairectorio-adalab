@@ -5,7 +5,7 @@ class Card extends React.Component {
   render () {
     const {kairos, match} = this.props;
     const id = match.params.id;
-    console.log(kairos);
+
     return (
       <div className="main__directory--wrapper">
       {kairos
