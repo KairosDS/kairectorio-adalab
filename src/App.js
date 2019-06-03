@@ -4,7 +4,6 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
 import { Route, Switch } from "react-router-dom";
-import Kairectory from "./components/Kairectory/Kairectory";
 import Resources from "./components/Resources/Resources";
 import Card from "./components/Card/Card";
 
@@ -26,7 +25,6 @@ class App extends React.Component {
         this.setState({
           categories: data
         });
-        console.log(this.state.categories);
       });
   }
 
@@ -40,7 +38,6 @@ class App extends React.Component {
         this.setState({
           kairos: data
         });
-        console.log(this.state.kairos);
       });
   }
 
@@ -56,11 +53,10 @@ class App extends React.Component {
         <Header />
         <main className="main">
           <Switch>
-            <Route exact path="/" component={Home} />
             <Route
-              path="/kairectorio"
-              render={props => (
-                <Kairectory categories={categories} kairos={kairos} />
+              exact path="/"
+              render={() => (
+                <Home categories={categories}/>
               )}
             />
               <Route

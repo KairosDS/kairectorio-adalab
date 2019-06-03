@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 class Kairectory extends React.Component {
   render() {
-    const {categories, kairos} = this.props;
+    const {categories} = this.props;
         return (
       <div>
         <ul className="list">

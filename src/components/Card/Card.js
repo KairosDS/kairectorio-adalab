@@ -9,7 +9,7 @@ class Card extends React.Component {
       {db.resources.kairos.map((item, index) => {
         return (
           <article className="directory__wrapper--card" key={index}>
-            <a className="main__directory--link" target="_blank" href={item.url}>
+            <a className="main__directory--link" target="_blank" rel="noopener noreferrer" href={item.url}>
               <div className="card__wrapper">
                 <div className="card__icon">
                   <i className="far fa-clock"></i>

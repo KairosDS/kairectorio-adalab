@@ -1,11 +1,11 @@
 import React from "react";
-import Kairectory from "../Kairectory/Kairectory";
 import './Home.scss';
+import Kairectory from "../Kairectory/Kairectory";
 
 
 class Home extends React.Component {
   render() {
-    const { categories, kairos } = this.props;
+    const {categories} = this.props;
     return (
       <div className="home">
         <section className="main__hero">
@@ -16,7 +16,9 @@ class Home extends React.Component {
             </h2>
           </div>
         </section>
-        <section className="main__directory" />
+        <section className="main__directory">
+          <Kairectory categories={categories} />
+        </section>
       </div>
     );
   }
