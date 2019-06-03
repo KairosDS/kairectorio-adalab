@@ -12,7 +12,8 @@ class App extends React.Component {
     super(props);
     this.state = {
       categories: [],
-      kairos: []
+      kairos: [],
+
     };
   }
 
@@ -70,7 +71,7 @@ class App extends React.Component {
                 )}
               />
             <Route
-              path="/kairectorio/recursos/:id"
+              path="/card/:id"
               render={props => (
                 <Card
                   match={props.match}
