@@ -7,12 +7,12 @@ class Kairectory extends React.Component {
         return (
           <div>
             <ul className="list">
-            {db.categories.map((item, index) => {
+            {db.map((item, index) => {
               return (
 
                <li className="list__item" key={index}>
                 {item}
-                <Resources db={db}/>
+                {/* <Resources db={db}/> */}
                </li>
               )})
               }
