@@ -1,5 +1,7 @@
 import React from "react";
 import Kairectory from "../Kairectory/Kairectory";
+import './Home.scss';
+
 
 class Home extends React.Component {
   render() {

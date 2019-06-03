@@ -1,9 +1,32 @@
-.main__hero--masinfo {
+.footer {
+  width: 100%;
+  height: 3rem;
+  border-top: 2px solid #ff7900;
+  background-color: #ffffff;
+  @media all and (min-width: 1200px){
+    height: 6rem;
+  }
+}
+
+.main__footer--masinfo {
   text-align: right;
   padding: 1em;
-  color: #FFF;
 }
-.main__hero--masinfo a {
-  color:#000000;
+
+.main__footer--masinfo a {
+  color:#ff7900;
   font-weight:bolder;
+}
+
+.footer__logo--img {
+  display: block;
+  width: 2rem;
+  height: auto;
+  margin: 0 auto;
+  padding: 0.5rem;
+  @media all and (min-width: 1200px){
+    width: 4rem;
+    height: auto;
+    padding: 1rem;
+  }
 }

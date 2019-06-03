@@ -1,10 +1,11 @@
 import React from 'react';
+import './Card.scss';
 
 class Card extends React.Component {
   render () {
     const {db} = this.props;
     return (
-      <div>
+      <div className="main__directory--wrapper">
       {db.resources.kairos.map((item, index) => {
         return (
           <article className="directory__wrapper--card" key={index}>

@@ -1,3 +1,12 @@
+.main__directory--wrapper {
+  padding: 1.5rem;
+  padding: 3rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1400px;
+  margin: 0 auto;
+}
 .directory__wrapper--card {
     width: 210px;
     height: 16rem;
@@ -33,3 +42,48 @@
   .card__description {
     color: #575756;
   }
+
+.card__info {
+  display: none;
+  @media (hover: hover){
+    display: block;
+    padding: 0.8rem 0.8rem 0 0.8rem;
+    color: #ff7900;
+  }
+}
+
+.card__more-info {
+  display: none;
+  @media (hover: hover){
+    max-width: 30rem;
+    height: 0;
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    z-index: 99999999999;
+    opacity: 0;
+  }
+}
+
+.card__info:hover {
+  @media (hover: hover){
+    color: #ff9433;
+  }
+}
+
+.more-info__text {
+  padding-bottom: 1rem;
+}
+
+.projects:hover .card__more-info{
+  @media (hover: hover){
+    opacity: 1;
+    height: auto;
+    background-color: #ff9433;
+    padding: 1.2rem;
+    line-height: 1.3;
+    text-align: left;
+    border-radius: 1rem;
+    color: #575756;
+  }
+}

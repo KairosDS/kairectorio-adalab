@@ -1,4 +1,5 @@
 import React from 'react';
+import './Resources.scss';
 
 class Resources extends React.Component {
   render(){
