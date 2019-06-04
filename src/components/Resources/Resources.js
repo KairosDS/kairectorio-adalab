@@ -1,6 +1,6 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import './Resources.scss';
+import CardResource from '../CardResource/CardResource';
 
 class Resources extends React.Component {
 
@@ -36,9 +36,8 @@ class Resources extends React.Component {
       <ul className="resources__list">
         {chosenCategory.map((item,index) => {
           return (
-          <li className="list__item" key={index}>
-            <h2 className="title">{item.title}</h2>
-            <Link className="btn__detail" to={`/card/${item.title}`}>Más información</Link>
+          <li key={index}>
+            <CardResource title={item.title}/>
           </li>
           )
         })}

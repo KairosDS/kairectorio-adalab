@@ -1,22 +1,7 @@
-.list {
+.category__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
-
-.list__item {
-  width: 210px;
-  height: 16rem;
-  border: #ff7900 solid 5px;
-  background-color: #ffffff;
-  margin: 1.5rem 0.7rem;
-  padding: 1.5rem 0;
-  text-align: center;
-  border-radius: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
 }
 
 .category__link {
@@ -26,20 +11,4 @@
   text-decoration: none;
 }
 
-h3.kaire__title {
-  text-transform: uppercase;
-}
 
-.icon__container {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 5px solid #ff7900;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.fa-chevron-right {
-  color: #ff7900;
-}
