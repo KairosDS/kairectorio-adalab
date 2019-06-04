@@ -1,6 +1,7 @@
 import React from 'react';
 import './CardResource.scss';
 import {Link} from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 class CardResource extends React.Component{
 
@@ -12,9 +13,15 @@ class CardResource extends React.Component{
           <h2 className="title">{title}</h2>
           <Link className="btn__detail" to={`/card/${title}`} id={category} onClick={identifyCategory}>Más información</Link>
         </div>
-      </div>   
+      </div>
     );
   }
 }
+
+CardResource.propTypes = {
+  title: PropTypes.string,
+  category: PropTypes.string,
+  identifyCategory: PropTypes.func
+};
 
 export default CardResource;
