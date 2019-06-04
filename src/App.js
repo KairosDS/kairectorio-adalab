@@ -34,9 +34,9 @@ class App extends React.Component {
   }
 
   fetchCategories() {
-    const url = "http://localhost:4000/";
+    const url = "https://kairectorio.herokuapp.com/";
     const newUrl = url + "categories";
-    fetch(newUrl)
+    fetch(newUrl, {mode: 'cors', headers: {'Access-Control-Allow-Origin' : '*'}})
       .then(response => response.json())
       .then(data => {
 
@@ -47,10 +47,10 @@ class App extends React.Component {
   }
 
   fetchResources(category) {
-    const url = "http://localhost:4000/";
+    const url = "https://kairectorio.herokuapp.com/";
     const resources = "resources/";
     const newUrl = url + resources + category;
-    fetch(newUrl)
+    fetch(newUrl, {mode: 'cors', headers: {'Access-Control-Allow-Origin' : '*'}})
       .then(response => response.json())
       .then(data => {
         this.setState({
