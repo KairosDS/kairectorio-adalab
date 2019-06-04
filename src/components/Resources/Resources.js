@@ -3,7 +3,6 @@ import './Resources.scss';
 import CardResource from '../CardResource/CardResource';
 
 class Resources extends React.Component {
-
   componentDidMount() {
     const {match} = this.props;
     const category = match.params.category;
@@ -11,11 +10,8 @@ class Resources extends React.Component {
   }
 
   render(){
-    const {match} = this.props;
+    const {kairos, laboral, desarrollo, agile, identifyCategory, match} = this.props;
     const category = match.params.category;
-    console.log(category)
-    const {kairos, laboral, desarrollo, agile} = this.props;
-
     const chooseCategory = () => {
       const {match} = this.props;
       const category = match.params.category;
@@ -31,10 +27,11 @@ class Resources extends React.Component {
     }
 
     const chosenCategory = chooseCategory();
-    console.log(chosenCategory);
     return(
       <ul className="resources__list">
-        {chosenCategory.map((item,index) => {
+        {chosenCategory
+        .filter(item => item.url !== '' ? item : false)
+        .map((item,index) => {
           return (
           <li key={index}>
             <CardResource title={item.title}/>

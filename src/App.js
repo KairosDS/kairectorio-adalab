@@ -15,10 +15,17 @@ class App extends React.Component {
       kairos: [],
       laboral: [],
       desarrollo: [],
-      agile: []
+      agile: [],
+      chosenCategory: ''
 
     };
     this.fetchResources = this.fetchResources.bind(this);
+    this.identifyCategory = this.identifyCategory.bind(this);
+  }
+
+  identifyCategory(event) {
+    const category = event.currentTarget.id;
+    this.setState({chosenCategory: category});
   }
 
   fetchCategories() {
@@ -52,7 +59,7 @@ class App extends React.Component {
   }
 
   render() {
-    const { categories, kairos, laboral, desarrollo, agile } = this.state;
+    const { categories, kairos, laboral, desarrollo, agile, chosenCategory } = this.state;
     return (
       <div className="App">
         <Header />
@@ -75,6 +82,7 @@ class App extends React.Component {
                     laboral={laboral}
                     desarrollo={desarrollo}
                     agile={agile}
+                    identifyCategory={this.identifyCategory}
                   />
                 )}
               />
@@ -85,6 +93,10 @@ class App extends React.Component {
                   match={props.match}
                   categories={categories}
                   kairos={kairos}
+                  laboral={laboral}
+                  desarrollo={desarrollo}
+                  agile={agile}
+                  chosenCategory={chosenCategory}
                 />
               )}
             />
