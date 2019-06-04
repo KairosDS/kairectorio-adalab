@@ -48,11 +48,11 @@ _Estas son las herramientas que hemos usado:_
 
 _Equipo de alumnas de Adalab formado por:_
 
-* **Ana María** - []()
-* **Marta Sobrino** - []()
-* **Megan Edwards** - []()
+* **Ana María Romero** - [Ana Maria Romero](https://github.com/superanika)
+* **Marta Sobrino** - [Marta Sobrino](https://github.com/MartaSobrino)
+* **Megan Edwards** - [Megan Edwards](https://github.com/m-m-e)
 * **Victoria Díaz** - [Victoria Diro](https://github.com/VictoriaDiro)
-* **Weronica** - []()
+* **Weronica Czarnomysy** - [Weronika Czarnomysy](https://github.com/wczarnomysy)
 
 También puedes mirar la lista de todos los [contribuyentes](https://github.com/KairosDS/kairectorio-adalab/graphs/contributors) quíenes han participado en este proyecto.
 
