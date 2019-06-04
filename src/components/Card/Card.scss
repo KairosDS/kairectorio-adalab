@@ -8,27 +8,16 @@
   margin: 0 auto;
 }
 
-.main__directory--link {
-  text-decoration: none;
-}
-
-.card__container {
+.card__container--final {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.card__icon {
-  font-size: 3rem;
-  padding: 0 0 1rem;
-  color: #ff7900;
-}
+
 .card__title {
   color: #212121;
   padding-bottom: 0.75rem;
   font-size: 24px;
-}
-.card__description {
-  color: #575756;
 }
 
 .card__info {

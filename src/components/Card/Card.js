@@ -27,7 +27,7 @@ class Card extends React.Component {
           .filter(item => (item.title.includes(id) ? item : false))
           .map((item, index) => {
             return (
-              <div className="card__container" key={index}>
+              <div className="card__container--final" key={index}>
                 <h3 className="card__title">{item.title}</h3>
                 <CardDetail
                   description={item.description}
