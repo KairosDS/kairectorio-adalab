@@ -2,12 +2,13 @@ import React from "react";
 import "./Card.scss";
 import CardDetail from "../CardDetail/CardDetail";
 import BackButton from "../BackButton/BackButton";
+import PropTypes from 'prop-types';
 
 class Card extends React.Component {
   render () {
     const {kairos, laboral, desarrollo, agile, match, chosenCategory, fetchResources} = this.props;
     const id = match.params.id;
-    
+
     const chooseCategory = (id) => {
       if(id === 'kairos') {
         return kairos;
@@ -57,6 +58,16 @@ class Card extends React.Component {
       </div>
     );
   }
+}
+
+Card.propTypes = {
+  kairos: PropTypes.array,
+  laboral: PropTypes.array,
+  desarrollo: PropTypes.array,
+  agile: PropTypes.array,
+  match: PropTypes.object,
+  chosenCategory: PropTypes.string,
+  fetchResources: PropTypes.func
 }
 
 export default Card;

@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 class backButton extends React.Component {
     render () {
@@ -9,5 +10,9 @@ class backButton extends React.Component {
         );
     }
 }
+
+backButton.propTypes = {
+  route: PropTypes.string
+};
 
 export default backButton;

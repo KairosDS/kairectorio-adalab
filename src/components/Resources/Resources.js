@@ -3,6 +3,7 @@ import './Resources.scss';
 import CardResource from '../CardResource/CardResource';
 import BackButton from "../BackButton/BackButton";
 import Search from '../Search/Search';
+import PropTypes from 'prop-types';
 
 
 class Resources extends React.Component {
@@ -50,6 +51,15 @@ class Resources extends React.Component {
 
     )
   }
+}
+
+Resources.propTypes = {
+  kairos: PropTypes.array,
+  laboral: PropTypes.array,
+  desarrollo: PropTypes.array,
+  agile: PropTypes.array,
+  identifyCategory: PropTypes.func,
+  match: PropTypes.object
 }
 
 export default Resources;

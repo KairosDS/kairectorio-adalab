@@ -1,7 +1,7 @@
 import React from "react";
 import './Home.scss';
 import Kairectory from "../Kairectory/Kairectory";
-
+import PropTypes from 'prop-types';
 
 class Home extends React.Component {
   render() {
@@ -22,6 +22,10 @@ class Home extends React.Component {
       </div>
     );
   }
+}
+
+Home.propTypes = {
+  categories: PropTypes.array
 }
 
 export default Home;
