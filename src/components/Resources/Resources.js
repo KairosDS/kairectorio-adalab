@@ -1,6 +1,8 @@
 import React from 'react';
 import './Resources.scss';
 import CardResource from '../CardResource/CardResource';
+import BackButton from "../BackButton/BackButton";
+
 
 class Resources extends React.Component {
   componentDidMount() {
@@ -28,17 +30,21 @@ class Resources extends React.Component {
 
     const chosenCategory = chooseCategory();
     return(
-      <ul className="resources__list">
-        {chosenCategory
-        .filter(item => item.url !== '' ? item : false)
-        .map((item,index) => {
-          return (
-          <li key={index}>
-            <CardResource title={item.title} category={category} identifyCategory={identifyCategory}/>
-          </li>
-          )
-        })}
-      </ul>
+      <React.Fragment>
+        <ul className="resources__list">
+          {chosenCategory
+          .filter(item => item.url !== '' ? item : false)
+          .map((item,index) => {
+            return (
+            <li key={index}>
+              <CardResource title={item.title} category={category} identifyCategory={identifyCategory}/>
+            </li>
+            )
+          })}
+        </ul>
+        <BackButton route="/" />
+      </React.Fragment>
+
     )
   }
 }
