@@ -1,3 +1,5 @@
+@import '../styles/variables.scss';
+
 .main__directory--wrapper {
   padding: 1.5rem;
   padding: 3rem;
@@ -15,7 +17,7 @@
 }
 
 .card__title {
-  color: #212121;
+  color: $color-dark-grey;
   padding-bottom: 0.75rem;
   font-size: 24px;
 }
@@ -25,7 +27,7 @@
   @media (hover: hover){
     display: block;
     padding: 0.8rem 0.8rem 0 0.8rem;
-    color: #ff7900;
+    color: $color-orange;
   }
 }
 
@@ -44,7 +46,7 @@
 
 .card__info:hover {
   @media (hover: hover){
-    color: #ff9433;
+    color: $color-light-orange;
   }
 }
 
@@ -56,11 +58,11 @@
   @media (hover: hover){
     opacity: 1;
     height: auto;
-    background-color: #ff9433;
+    background-color: $color-light-orange;
     padding: 1.2rem;
     line-height: 1.3;
     text-align: left;
     border-radius: 1rem;
-    color: #575756;
+    color: $color-light-grey;
   }
 }
