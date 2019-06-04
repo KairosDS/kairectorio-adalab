@@ -2,17 +2,33 @@ import React from 'react';
 import './Card.scss';
 
 class Card extends React.Component {
+
   render () {
-    const {kairos, match} = this.props;
+    const {kairos, laboral, desarrollo, agile, match, chosenCategory} = this.props;
     const id = match.params.id;
+    console.log(id);
+
+    const chooseCategory = (category) => {
+      if(category === 'kairos') {
+        return kairos;
+      } else if (category === 'laboral'){
+        return laboral;
+      } else if (category === 'desarrollo'){
+        return desarrollo;
+      } else {
+        return agile;
+      }
+    }
+    const array = chooseCategory(chosenCategory);
+    console.log(array);
 
     return (
       <div className="main__directory--wrapper">
-      {kairos
+      {array
         .filter(item => item.title.includes(id) ? item : false)
         .map((item, index) => {
           return (
-            <div className="card__container">
+            <div className="card__container" key={index}>
               <h3 className="card__title">{item.title}</h3>
               <article className="directory__wrapper--card" key={index}>
                   <div className="card__wrapper">

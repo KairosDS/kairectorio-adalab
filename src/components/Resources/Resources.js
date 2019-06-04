@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom';
 import './Resources.scss';
 
 class Resources extends React.Component {
-
   componentDidMount() {
     const {match} = this.props;
     const category = match.params.category;
@@ -11,11 +10,8 @@ class Resources extends React.Component {
   }
 
   render(){
-    const {match} = this.props;
+    const {kairos, laboral, desarrollo, agile, identifyCategory, match} = this.props;
     const category = match.params.category;
-    console.log(category)
-    const {kairos, laboral, desarrollo, agile} = this.props;
-
     const chooseCategory = () => {
       const {match} = this.props;
       const category = match.params.category;
@@ -31,7 +27,6 @@ class Resources extends React.Component {
     }
 
     const chosenCategory = chooseCategory();
-    console.log(chosenCategory);
     return(
       <ul className="resources__list">
         {chosenCategory.map((item,index) => {
@@ -39,7 +34,7 @@ class Resources extends React.Component {
           <li className="list__item" key={index}>
             <h2 className="title">{item.title}</h2>
             <p className="description">{item.description}</p>
-            <Link className="btn__detail" to={`/card/${item.title}`}>Más información</Link>
+            <Link className="btn__detail" to={`/card/${item.title}`} id={category} onClick={identifyCategory}>Más información</Link>
           </li>
           )
         })}
