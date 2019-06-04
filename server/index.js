@@ -1,6 +1,33 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
-const PORT = 3000;
+ 
+conf = {
+  port: process.env.PORT || process.argv[2] || 3000,
+  originUndefined: function (req, res, next) {
+    if (!req.headers.origin) {
+      res.json({
+        mess: 'Hi you are visiting the service locally. If this was a CORS the origin header should not be undefined'
+      });
+      next();
+    } else {
+      next();
+    }
+  },
+  cors: {
+    origin: function (origin, cb) {
+      let wl = ['https://kairectorio.herokuapp.com/', 'localhost:3000'];
+      if (wl.indexOf(origin) != -1 || origin == undefined) {
+        cb(null, true);
+      } else {
+        cb(new Error('invalid origin: ' + origin), false);
+      }
+    },
+    optionsSuccessStatus: 200
+  }
+};
+ 
+app.use(cors(conf.cors));
 
 const db = {
   "categories": ["kairos", "laboral", "desarrollo", "agile"],
@@ -127,6 +154,6 @@ app.get('/resources/:category', function (req, res) {
 	res.json(result);
 });
 
-app.listen(PORT, function () {
-	console.log('Your node js server is running on PORT:', PORT);
+app.listen(conf.port, function () {
+	console.log('Your node js server is running on PORT:', conf.port);
 });
