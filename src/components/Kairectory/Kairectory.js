@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Kairectory.scss";
-import CardKairectory from "../CardKairectory";
+import CardKairectory from "../CardKairectory/CardKairectory";
 
 class Kairectory extends React.Component {
   render() {
@@ -17,7 +17,7 @@ class Kairectory extends React.Component {
                 to={`/resources/${item}`}
               >
                 <li>
-                <CardKairectory item={item}/>
+                  <CardKairectory item={item}/>
                 </li>
               </Link>
             );

@@ -19,3 +19,24 @@ ul {
   margin: 0;
   padding: 0;
 }
+
+.directory__wrapper--card {
+  width: 210px;
+  height: 16rem;
+  border: #ff7900 solid 5px;
+  background-color: #ffffff;
+  margin: 1.5rem 0.7rem;
+  padding: 1.5rem 0;
+  text-align: center;
+  border-radius: 1rem;
+}
+
+.card__wrapper {
+  width: 150px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
