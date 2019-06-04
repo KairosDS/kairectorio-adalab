@@ -10,7 +10,7 @@ class CardDetail extends React.Component {
           <div className="card__icon">
             <i className="far fa-clock" />
           </div>
-          <p className="card__description">{description}</p>
+          <p className="card__description">{description || 'No hay descripción'}</p>
         </div>
         <a
           className="main__directory--link"
