@@ -1,5 +1,4 @@
 .directory__wrapper--final {
-  width: 500px;
   height: 16rem;
   border: #ff7900 solid 5px;
   background-color: #ffffff;
@@ -11,6 +10,9 @@
   display:flex;
   flex-direction: column;
   justify-content:space-between;
+  @media all and (min-width: 768px){
+    width: 500px;
+  }
 }
 
 .card__icon {
@@ -21,6 +23,8 @@
 .card__description {
   color: #575756;
   align-self: center;
+  height: 200px;
+  overflow: scroll;
 }
 
 .main__directory--link {
