@@ -8,7 +8,7 @@ class Kairectory extends React.Component {
     const { categories } = this.props;
     return (
       <div>
-        <ul className="list">
+        <ul className="category__list">
           {categories.map((item, index) => {
             return (
               <Link
@@ -27,4 +27,5 @@ class Kairectory extends React.Component {
     );
   }
 }
+
 export default Kairectory;
