@@ -3,27 +3,45 @@ import "./Card.scss";
 import CardDetail from "../CardDetail/CardDetail";
 
 class Card extends React.Component {
+  // componentDidMount() {
+  //   const {chosenCategory, fetchResources} = this.props;
+  //   console.log(chosenCategory);
+  //   fetchResources(chosenCategory);
+  // }
+
   render () {
-    const {kairos, laboral, desarrollo, agile, match, chosenCategory} = this.props;
-
+    const {kairos, laboral, desarrollo, agile, match, chosenCategory, fetchResources} = this.props;
     const id = match.params.id;
-
-    const chooseCategory = (category) => {
-      if(category === 'kairos') {
+    
+    const chooseCategory = (id) => {
+      if(id === 'kairos') {
         return kairos;
-      } else if (category === 'laboral'){
+      } else if (id === 'laboral'){
         return laboral;
-      } else if (category === 'desarrollo'){
+      } else if (id === 'desarrollo'){
         return desarrollo;
       } else {
         return agile;
       }
     }
-    const array = chooseCategory(chosenCategory);
+
+    const isCategory = (chosenCategory) => {
+      if(chosenCategory !== '') {
+        fetchResources(chosenCategory);
+        const array = chooseCategory(chosenCategory);
+        return array;
+      } else {
+        const array = [];
+        return array;
+      }
+    }
+
+    const array = isCategory(chosenCategory);
 
     return (
       <div className="main__directory--wrapper">
-        {array
+        {array.length > 0 ?
+          array
           .filter(item => (item.title.includes(id) ? item : false))
           .map((item, index) => {
             return (
@@ -35,7 +53,10 @@ class Card extends React.Component {
                 />
               </div>
             );
-          })}
+          })
+        :
+        <p>No hay datos</p>
+        }
       </div>
     );
   }

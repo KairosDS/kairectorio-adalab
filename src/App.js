@@ -23,9 +23,14 @@ class App extends React.Component {
     this.identifyCategory = this.identifyCategory.bind(this);
   }
 
+  saveCategory(category) {
+    localStorage.setItem('category', category);
+  }
+
   identifyCategory(event) {
     const category = event.currentTarget.id;
     this.setState({chosenCategory: category});
+    this.saveCategory(category);
   }
 
   fetchCategories() {
@@ -56,6 +61,8 @@ class App extends React.Component {
 
   componentDidMount() {
     this.fetchCategories();
+    const category = localStorage.getItem('category') || '';
+    this.setState({chosenCategory: category});
   }
 
   render() {
@@ -97,6 +104,7 @@ class App extends React.Component {
                   desarrollo={desarrollo}
                   agile={agile}
                   chosenCategory={chosenCategory}
+                  fetchResources={this.fetchResources}
                 />
               )}
             />
