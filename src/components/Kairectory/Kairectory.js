@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Kairectory.scss";
+import CardKairectory from "../CardKairectory";
 
 class Kairectory extends React.Component {
   render() {
@@ -15,15 +16,8 @@ class Kairectory extends React.Component {
                 className="category__link"
                 to={`/resources/${item}`}
               >
-                <li className="list__item">
-                  <div className="directory__wrapper--card">
-                    <div className="card__wrapper">
-                      <h3 className="kaire__title">{item}</h3>
-                      <div className="icon__container">
-                        <i className="fas fa-chevron-right" />
-                      </div>
-                    </div>
-                  </div>
+                <li>
+                <CardKairectory item={item}/>
                 </li>
               </Link>
             );
