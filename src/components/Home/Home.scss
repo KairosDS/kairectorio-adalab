@@ -1,8 +1,10 @@
+@import '../styles/variables.scss';
+
 .main__hero {
   width: 100%;
   background-image: linear-gradient(
-      rgba(255, 115, 0, 0.383),
-      rgba(255, 115, 0, 0.589)
+    $color-brown-opacity-high,
+    $color-brown-opacity-low
     ),
     url("../../img/headerBgn.jpg");
   background-position: center;
@@ -11,10 +13,16 @@
 }
 
 .main__hero--wrapper {
-  padding: 3rem 0 0 2rem;
+  padding: 3rem 0;
   max-width: 1400px;
+  text-align: center;
+  @media all and (min-width: 768px) {
+    text-align: left;
+    padding-left: 2rem;
+  }
   @media all and (min-width: 1200px){
     margin: 0 auto;
+    text-align: center;
   }
 }
 
@@ -25,7 +33,7 @@
   letter-spacing: -0.5px;
   line-height: 1.2;
   padding-top: 30px;
-  color: #e8e8e8;
+  color: $color-soft-grey;
   @media all and (min-width: 1200px){
     padding-top: 5rem;
   }
