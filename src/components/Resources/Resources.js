@@ -34,7 +34,7 @@ class Resources extends React.Component {
         .map((item,index) => {
           return (
           <li key={index}>
-            <CardResource title={item.title}/>
+            <CardResource title={item.title} category={category} identifyCategory={identifyCategory}/>
           </li>
           )
         })}
