@@ -1,6 +1,7 @@
 import React from "react";
 import "./Card.scss";
 import CardDetail from "../CardDetail/CardDetail";
+import BackButton from "../BackButton/BackButton";
 
 class Card extends React.Component {
   render () {
@@ -51,6 +52,8 @@ class Card extends React.Component {
         :
         <p>No hay datos</p>
         }
+         <BackButton route={`/resources/${chosenCategory}`} />
+
       </div>
     );
   }
