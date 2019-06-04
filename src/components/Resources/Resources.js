@@ -31,6 +31,7 @@ class Resources extends React.Component {
     const chosenCategory = chooseCategory();
     return(
       <React.Fragment>
+        <BackButton route="/" />
         <ul className="resources__list">
           {chosenCategory
           .filter(item => item.url !== '' ? item : false)
@@ -42,7 +43,6 @@ class Resources extends React.Component {
             )
           })}
         </ul>
-        <BackButton route="/" />
       </React.Fragment>
 
     )
