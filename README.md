@@ -1,1 +1,66 @@
-# kairectorio-adalab
+![alt kairos](/src/img/kairosLogo.png)
+
+# Kairectorio by Adalab
+
+_Directorio de recursos para personal de Kariós_
+
+## Comenzando 🚀
+
+_Puedes obtener una copia local de este repositorio pulsando el botón verde *Clone or download* en la parte supior derecha de este repositorio._
+
+
+### Pre-requisitos 📋
+
+_Por el momento debes instalar un servidor local para poder utilizar esta herramienta, para ello ejecuta el comando:_
+
+```
+Node index
+```
+
+### Estructura 🏢
+
+_A continuación puedes ver la estructura de sus componentes:_
+
+```
+/
+`- _src
+   |- components
+   |  |- Card
+   |  |- Footer
+   |  |- Header
+   |  |- Home
+   |  |- Kairectory
+   |  |- Resources
+   |- img
+   |- stylesheets
+
+```
+
+## Construido con 🛠️
+
+_Estas son las herramientas que hemos usado:_
+
+* [React](https://reactjs.org/) - Librería JavaScript
+* [Sass](https://sass-lang.com/) - Preprocesador de estilos
+* [Github](https://github.com/) - Control de versiones
+
+## Autores ✒️
+
+_Equipo de alumnas de Adalab formado por:_
+
+* **Ana María** - []()
+* **Marta Sobrino** - []()
+* **Megan Edwards** - []()
+* **Victoria Díaz** - [Victoria Diro](https://github.com/VictoriaDiro)
+* **Weronica** - []()
+
+También puedes mirar la lista de todos los [contribuyentes](https://github.com/KairosDS/kairectorio-adalab/graphs/contributors) quíenes han participado en este proyecto.
+
+## Expresiones de Gratitud 🎁
+
+* Comenta a otros sobre este proyecto 📢
+* Invita una cerveza 🍺 a alguien del equipo.
+* Da las gracias públicamente 🤓.
+* etc.
+---
+Creado con ❤️ por **Ana, Marta, Megan, Victoria y Werónica** 😊
