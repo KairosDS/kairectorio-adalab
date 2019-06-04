@@ -2,7 +2,7 @@ import React from "react";
 import "./Card.scss";
 import CardDetail from "../CardDetail/CardDetail";
 import BackButton from "../BackButton/BackButton";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 class Card extends React.Component {
   render () {

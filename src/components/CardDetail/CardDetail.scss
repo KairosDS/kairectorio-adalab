@@ -1,8 +1,10 @@
+@import '../styles/variables.scss';
+
 .directory__wrapper--final {
   width: 500px;
   height: 16rem;
-  border: #ff7900 solid 5px;
-  background-color: #ffffff;
+  border: $color-orange solid 5px;
+  background-color: $color-white;
   margin: 1.5rem 0.7rem;
   padding: 1.5rem 0;
   text-align: center;
@@ -15,28 +17,28 @@
 
 .card__icon {
   font-size: 3rem;
-  color: #ff7900;
+  color: $color-orange;
 }
 
 .card__description {
-  color: #575756;
+  color: $color-light-grey;
   align-self: center;
 }
 
 .main__directory--link {
   text-decoration: none;
-  background: #ff7900;
-  border: 3px solid white;
-  color: white;
+  background: $color-orange;
+  border: 3px solid $color-white;
+  color: $color-white;
   width: 100px;
   margin: 0 auto;
   padding: 2%;
   border-radius: 10px;
   font-weight: bold;
   &:hover{
-    background: white;
-    border: 3px solid #ff7900;
-    color: #ff7900;
+    background: $color-white;
+    border: 3px solid $color-orange;
+    color: $color-orange;
   }
 }
 
