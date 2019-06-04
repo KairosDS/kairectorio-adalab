@@ -15,10 +15,22 @@ class App extends React.Component {
       kairos: [],
       laboral: [],
       desarrollo: [],
-      agile: []
+      agile: [],
+      chosenCategory: ''
 
     };
     this.fetchResources = this.fetchResources.bind(this);
+    this.identifyCategory = this.identifyCategory.bind(this);
+  }
+
+  saveCategory(category) {
+    localStorage.setItem('category', category);
+  }
+
+  identifyCategory(event) {
+    const category = event.currentTarget.id;
+    this.setState({chosenCategory: category});
+    this.saveCategory(category);
   }
 
   fetchCategories() {
@@ -49,10 +61,12 @@ class App extends React.Component {
 
   componentDidMount() {
     this.fetchCategories();
+    const category = localStorage.getItem('category') || '';
+    this.setState({chosenCategory: category});
   }
 
   render() {
-    const { categories, kairos, laboral, desarrollo, agile } = this.state;
+    const { categories, kairos, laboral, desarrollo, agile, chosenCategory } = this.state;
     return (
       <div className="App">
         <Header />
@@ -75,6 +89,7 @@ class App extends React.Component {
                     laboral={laboral}
                     desarrollo={desarrollo}
                     agile={agile}
+                    identifyCategory={this.identifyCategory}
                   />
                 )}
               />
@@ -85,6 +100,11 @@ class App extends React.Component {
                   match={props.match}
                   categories={categories}
                   kairos={kairos}
+                  laboral={laboral}
+                  desarrollo={desarrollo}
+                  agile={agile}
+                  chosenCategory={chosenCategory}
+                  fetchResources={this.fetchResources}
                 />
               )}
             />

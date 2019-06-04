@@ -1,21 +1,19 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import './Resources.scss';
+import CardResource from '../CardResource/CardResource';
+import BackButton from "../BackButton/BackButton";
+
 
 class Resources extends React.Component {
-
   componentDidMount() {
     const {match} = this.props;
     const category = match.params.category;
-    this.props.fetchResources(category)
+    this.props.fetchResources(category);
   }
 
   render(){
-    const {match} = this.props;
+    const {kairos, laboral, desarrollo, agile, identifyCategory, match} = this.props;
     const category = match.params.category;
-    console.log(category)
-    const {kairos, laboral, desarrollo, agile} = this.props;
-
     const chooseCategory = () => {
       const {match} = this.props;
       const category = match.params.category;
@@ -31,18 +29,22 @@ class Resources extends React.Component {
     }
 
     const chosenCategory = chooseCategory();
-    console.log(chosenCategory);
     return(
-      <ul className="resources__list">
-        {chosenCategory.map((item,index) => {
-          return (
-          <li className="list__item" key={index}>
-            <h2 className="title">{item.title}</h2>
-            <Link className="btn__detail" to={`/card/${item.title}`}>Más información</Link>
-          </li>
-          )
-        })}
-      </ul>
+      <React.Fragment>
+        <ul className="resources__list">
+          {chosenCategory
+          .filter(item => item.url !== '' ? item : false)
+          .map((item,index) => {
+            return (
+            <li key={index}>
+              <CardResource title={item.title} category={category} identifyCategory={identifyCategory}/>
+            </li>
+            )
+          })}
+        </ul>
+        <BackButton route="/" />
+      </React.Fragment>
+
     )
   }
 }

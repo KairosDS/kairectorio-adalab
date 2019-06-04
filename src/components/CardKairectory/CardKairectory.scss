@@ -1,23 +1,19 @@
-.main {
-  font-family: "Open Sans", sans-serif;
-  /* header 88 y footer 3 */
-  min-height: calc(100vh - 88px - 3rem);
-  background-color: #e8e8e8;
-  @media all and (min-width: 1200px){
-    /* 88 por el header y 6 por footer  */
-    min-height: calc(100vh - 88px - 6rem);
-  }
+.icon__title {
+  text-transform: uppercase;
 }
 
-.bold-text {
-  font-weight: bold;
-  color: #fff;
+.icon__container {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 5px solid #ff7900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.fa-chevron-right {
+  color: #ff7900;
 }
 
 .directory__wrapper--card {
