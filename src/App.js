@@ -36,7 +36,7 @@ class App extends React.Component {
   fetchCategories() {
     const url = "https://kairectorio.herokuapp.com/";
     const newUrl = url + "categories";
-    fetch(newUrl, {mode: 'cors', headers: {'Access-Control-Allow-Origin' : '*'}})
+    fetch(newUrl)
       .then(response => response.json())
       .then(data => {
 
@@ -50,7 +50,7 @@ class App extends React.Component {
     const url = "https://kairectorio.herokuapp.com/";
     const resources = "resources/";
     const newUrl = url + resources + category;
-    fetch(newUrl, {mode: 'cors', headers: {'Access-Control-Allow-Origin' : '*'}})
+    fetch(newUrl)
       .then(response => response.json())
       .then(data => {
         this.setState({

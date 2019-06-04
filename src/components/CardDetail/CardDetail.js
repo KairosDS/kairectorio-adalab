@@ -17,7 +17,7 @@ class CardDetail extends React.Component {
           rel="noopener noreferrer"
           href={url}
         >
-          {url}
+          Ir al recurso
         </a>
       </div>
     );
