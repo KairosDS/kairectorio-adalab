@@ -6,7 +6,7 @@ class Resources extends React.Component {
   componentDidMount() {
     const {match} = this.props;
     const category = match.params.category;
-    this.props.fetchResources(category)
+    this.props.fetchResources(category);
   }
 
   render(){
