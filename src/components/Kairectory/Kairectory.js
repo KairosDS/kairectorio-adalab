@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Kairectory.scss";
 import CardKairectory from "../CardKairectory/CardKairectory";
+import PropTypes from 'prop-types';
 
 class Kairectory extends React.Component {
   render() {
@@ -26,6 +27,10 @@ class Kairectory extends React.Component {
       </div>
     );
   }
+}
+
+Kairectory.propTypes = {
+  categories: PropTypes.array
 }
 
 export default Kairectory;
