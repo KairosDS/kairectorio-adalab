@@ -33,6 +33,7 @@ class Resources extends React.Component {
     const chosenCategory = chooseCategory();
     return(
       <React.Fragment>
+        <BackButton route="/" />
         <Search handleSearchInput={handleSearchInput} />
         <ul className="resources__list">
           {chosenCategory
@@ -46,7 +47,6 @@ class Resources extends React.Component {
             )
           })}
         </ul>
-        <BackButton route="/" />
       </React.Fragment>
 
     )
