@@ -13,7 +13,6 @@
   padding: 1.5rem 0;
   text-align: center;
   border-radius: 1rem;
-  text-transform: uppercase;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,6 +24,10 @@
   font-weight: bold;
   font-size:24px;
   text-decoration: none;
+}
+
+h3.kaire__title {
+  text-transform: uppercase;
 }
 
 .icon__container {
