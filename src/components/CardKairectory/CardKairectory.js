@@ -1,6 +1,6 @@
 import React from "react";
 import "./CardKairectory.scss";
-
+import PropTypes from 'prop-types';
 
 class CardKairectory extends React.Component {
   render() {
@@ -16,6 +16,10 @@ class CardKairectory extends React.Component {
       </div>
     )
   }
+}
+
+CardKairectory.propTypes = {
+  item: PropTypes.object
 }
 
 export default CardKairectory;

@@ -1,5 +1,6 @@
 import React from "react";
 import "./CardDetail.scss";
+import PropTypes from 'prop-types';
 
 class CardDetail extends React.Component {
   render() {
@@ -21,6 +22,11 @@ class CardDetail extends React.Component {
       </div>
     );
   }
+}
+
+CardDetail.propTypes = {
+  description: PropTypes.string,
+  url: PropTypes.string
 }
 
 export default CardDetail;
