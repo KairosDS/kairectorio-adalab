@@ -3,12 +3,6 @@ import "./Card.scss";
 import CardDetail from "../CardDetail/CardDetail";
 
 class Card extends React.Component {
-  // componentDidMount() {
-  //   const {chosenCategory, fetchResources} = this.props;
-  //   console.log(chosenCategory);
-  //   fetchResources(chosenCategory);
-  // }
-
   render () {
     const {kairos, laboral, desarrollo, agile, match, chosenCategory, fetchResources} = this.props;
     const id = match.params.id;
