@@ -1,3 +1,5 @@
+@import '../styles/variables.scss';
+
 .icon__title {
   text-transform: uppercase;
 }
@@ -6,21 +8,21 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 5px solid #ff7900;
+  border: 5px solid $color-orange;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .fa-chevron-right {
-  color: #ff7900;
+  color: $color-orange;
 }
 
 .directory__wrapper--card {
   width: 210px;
   height: 16rem;
-  border: #ff7900 solid 5px;
-  background-color: #ffffff;
+  border: $color-orange solid 5px;
+  background-color: $color-white;
   margin: 1.5rem 0.7rem;
   padding: 1.5rem 0;
   text-align: center;
