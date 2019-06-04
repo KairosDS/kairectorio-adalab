@@ -4,14 +4,16 @@ import "./Kairectory.scss";
 
 class Kairectory extends React.Component {
   render() {
-    const {categories} = this.props;
-        return (
+    const { categories } = this.props;
+    return (
       <div>
         <ul className="list">
           {categories.map((item, index) => {
             return (
               <li className="list__item" key={index}>
-                <Link className="category__link" to={`/resources/${item}`}>{item}</Link>
+                <Link className="category__link" to={`/resources/${item}`}>
+                  {item}
+                </Link>
               </li>
             );
           })}
