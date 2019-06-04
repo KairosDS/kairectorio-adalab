@@ -19,7 +19,7 @@ class CardKairectory extends React.Component {
 }
 
 CardKairectory.propTypes = {
-  item: PropTypes.object
+  item: PropTypes.string
 }
 
 export default CardKairectory;
