@@ -29,11 +29,13 @@ class Resources extends React.Component {
     const chosenCategory = chooseCategory();
     return(
       <ul className="resources__list">
-        {chosenCategory.map((item,index) => {
+        {chosenCategory
+        .filter(item => item.url !== '' ? item : false)
+        .map((item,index) => {
           return (
           <li className="list__item" key={index}>
             <h2 className="title">{item.title}</h2>
-            <p className="description">{item.description}</p>
+            <p className="description">{item.description || 'No hay descripción'}</p>
             <Link className="btn__detail" to={`/card/${item.title}`} id={category} onClick={identifyCategory}>Más información</Link>
           </li>
           )

@@ -6,7 +6,6 @@ class Card extends React.Component {
   render () {
     const {kairos, laboral, desarrollo, agile, match, chosenCategory} = this.props;
     const id = match.params.id;
-    console.log(id);
 
     const chooseCategory = (category) => {
       if(category === 'kairos') {
@@ -20,7 +19,6 @@ class Card extends React.Component {
       }
     }
     const array = chooseCategory(chosenCategory);
-    console.log(array);
 
     return (
       <div className="main__directory--wrapper">
@@ -35,7 +33,7 @@ class Card extends React.Component {
                     <div className="card__icon">
                       <i className="far fa-clock"></i>
                     </div>
-                    <p className="card__description">{item.description}</p>
+                    <p className="card__description">{item.description || 'No hay descripción'}</p>
                   </div>
                   <a className="main__directory--link" target="_blank" rel="noopener noreferrer" href={item.url}>{item.url}</a>
               </article>
