@@ -33,7 +33,12 @@ class Resources extends React.Component {
     const chosenCategory = chooseCategory();
     return(
       <React.Fragment>
-        <Search handleSearchInput={handleSearchInput} />
+        <div className="nav__bar__container">
+          <div className="nav__bar">
+            <BackButton route="/" />
+            <Search handleSearchInput={handleSearchInput} />
+          </div>
+        </div>
         <ul className="resources__list">
           {chosenCategory
           .filter(item => item.title.toLowerCase().includes(searchValue))
@@ -46,7 +51,6 @@ class Resources extends React.Component {
             )
           })}
         </ul>
-        <BackButton route="/" />
       </React.Fragment>
 
     )
