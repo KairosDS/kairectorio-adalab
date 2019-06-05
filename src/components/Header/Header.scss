@@ -6,9 +6,9 @@
   .main-header__logo {
     max-width: rem(1400);
     text-align: center;
-    @media all and (min-width: 768px){
+    @media all and (min-width: rem(768)) {
       text-align: left;
-      margin-left: 50px;
+      margin-left: rem(50);
     }
   }
   .logo__img {

@@ -6,7 +6,7 @@
   height: 3rem;
   border-top: rem(2) solid $color-orange;
   background-color: $color-white;
-  @media all and (min-width: 1200px) {
+  @media all and (min-width: rem(1200)) {
     height: 6rem;
   }
 }
@@ -16,7 +16,7 @@
   padding: 1em;
   @media all and (min-width: rem(768)) {
     text-align: right;
-    margin-right: 50px;
+    margin-right: rem(50);
   }
 }
 
@@ -31,7 +31,7 @@
   height: auto;
   margin: 0 auto;
   padding: 0.5rem;
-  @media all and (min-width: 1200px) {
+  @media all and (min-width: rem(1200)) {
     width: 4rem;
     height: auto;
     padding: 1rem;

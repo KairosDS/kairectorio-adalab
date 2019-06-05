@@ -9,7 +9,7 @@
   @media all and (min-width: rem(768)) {
     margin: auto;
   }
-  @media all and (min-width: rem(1280)) {
+  @media all and (min-width: rem(1200)) {
     width: 80%;
   }
 }
@@ -44,7 +44,7 @@
   a {
     color: $color-white;
     text-decoration: none;
-    margin-bottom: 23px;
+    margin-bottom: rem(23);
     @media all and (min-width: rem(768)){
       margin-bottom: 0;
     }
@@ -58,8 +58,8 @@
 }
 
 .search__input {
-  height: 30px;
-  border-radius: 10px;
-  padding: 0 5px;
-  border: 2px solid white;
+  height: rem(30);
+  border-radius: rem(10);
+  padding: 0 rem(5);
+  border: rem(2) solid white;
 }

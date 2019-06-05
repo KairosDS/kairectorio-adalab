@@ -1,9 +1,11 @@
+@import "../src/components/styles/functions.scss";
+
 .main {
   font-family: "Open Sans", sans-serif;
   /* header 88 y footer 3 */
-  min-height: calc(100vh - 88px - 3rem);
+  min-height: calc(100vh - rem(88) - 3rem);
   background-color: #e8e8e8;
-  @media all and (min-width: 1200px){
+  @media all and (min-width: rem(1200)) {
     /* 88 por el header y 6 por footer  */
     min-height: calc(100vh - 88px - 6rem);
   }
@@ -21,9 +23,9 @@ ul {
 }
 
 .directory__wrapper--card {
-  width: 210px;
+  width: rem(210);
   height: 16rem;
-  border: #ff7900 solid 5px;
+  border: #ff7900 solid rem(5);
   background-color: #ffffff;
   margin: 1.5rem 0.7rem;
   padding: 1.5rem 0;
@@ -32,7 +34,7 @@ ul {
 }
 
 .card__wrapper {
-  width: 150px;
+  width: rem(150);
   height: 100%;
   margin: 0 auto;
   display: flex;
