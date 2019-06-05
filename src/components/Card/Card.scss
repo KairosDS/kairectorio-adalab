@@ -1,4 +1,5 @@
-@import '../styles/variables.scss';
+@import "../styles/variables.scss";
+@import "../styles/functions.scss";
 
 .main__directory--wrapper {
   padding: 1.5rem;
@@ -6,7 +7,7 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  max-width: 1400px;
+  max-width: rem(1400);
   margin: 0 auto;
 }
 
@@ -19,12 +20,12 @@
 .card__title {
   color: $color-dark-grey;
   padding-bottom: 0.75rem;
-  font-size: 24px;
+  font-size: rem(24);
 }
 
 .card__info {
   display: none;
-  @media (hover: hover){
+  @media (hover: hover) {
     display: block;
     padding: 0.8rem 0.8rem 0 0.8rem;
     color: $color-orange;
@@ -33,7 +34,7 @@
 
 .card__more-info {
   display: none;
-  @media (hover: hover){
+  @media (hover: hover) {
     max-width: 30rem;
     height: 0;
     display: block;
@@ -45,7 +46,7 @@
 }
 
 .card__info:hover {
-  @media (hover: hover){
+  @media (hover: hover) {
     color: $color-light-orange;
   }
 }
@@ -54,8 +55,8 @@
   padding-bottom: 1rem;
 }
 
-.projects:hover .card__more-info{
-  @media (hover: hover){
+.projects:hover .card__more-info {
+  @media (hover: hover) {
     opacity: 1;
     height: auto;
     background-color: $color-light-orange;

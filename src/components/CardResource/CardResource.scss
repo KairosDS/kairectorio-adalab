@@ -1,4 +1,5 @@
-@import '../styles/variables.scss';
+@import "../styles/variables.scss";
+@import "../styles/functions.scss";
 
 .card__wraper__space {
   justify-content: space-between;
@@ -12,13 +13,13 @@
   background: $color-orange;
   color: $color-white;
   font-weight: bold;
-  padding: 10px;
-  border-radius: 10px;
+  padding: rem(10);
+  border-radius: rem(10);
   text-decoration: none;
-  border: 3px solid $color-white;
-  &:hover{
+  border: rem(3) solid $color-white;
+  &:hover {
     background: $color-white;
     color: $color-orange;
-    border: 3px solid $color-orange;
+    border: rem(3) solid $color-orange;
   }
 }
