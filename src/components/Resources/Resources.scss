@@ -1,3 +1,4 @@
+@import '../styles/variables.scss';
 @import "../styles/functions.scss";
 
 .resources__list {
@@ -5,13 +6,11 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  @media all and (min-width: rem(768)) {
-    width: 70%;
+  @media all and (min-width: rem(768px)) {
     margin: auto;
   }
-  @media all and (min-width: rem(1280)) {
-    width: 100%;
-    margin: auto;
+  @media all and (min-width: rem(1280px)) {
+    width: 80%;
   }
 }
 .title{
@@ -27,19 +26,22 @@
 }
 
 .nav__bar {
-  color: white;
+  color: $color-white;
   display: flex;
   align-items: center;
   justify-content: space-between;
   min-width: 70%;
   max-width: 80%;
   margin: 0 auto;
-
+  transition: all .2s ease-in-out;
   a {
-    color: white;
+    color: $color-white;
     text-decoration: none;
     &:hover {
-      color: #FF7900;
+      transform: scale(1.1);
+    }
+    &:focus{
+      color: $color-light-orange;
     }
   }
 }

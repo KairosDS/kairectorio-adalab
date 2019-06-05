@@ -5,8 +5,9 @@
   height: rem(88);
   .main-header__logo {
     max-width: rem(1400);
-    @media all and (min-width: rem(1200)) {
-      margin: 0 auto;
+    text-align: center;
+    @media all and (min-width: rem(768px)){
+      text-align: left;
     }
   }
   .logo__img {

@@ -2,7 +2,6 @@
 @import "../styles/functions.scss";
 
 .directory__wrapper--final {
-  height: 16rem;
   border: $color-orange solid 5px;
   background-color: $color-white;
   margin: 1.5rem 0.7rem;
@@ -17,9 +16,9 @@
     width: rem(500);
   justify-content:space-between;
   box-shadow: 5px 10px 10px $color-shadow;
-  box-shadow: 10px 10px 60px -19px rgba(0,0,0,0.75);
   @media all and (min-width: rem(768)) {
     width: rem(500);
+    min-height: 14rem;
   }
 }
 
@@ -31,9 +30,6 @@
 .card__description {
   color: $color-light-grey;
   align-self: center;
-  height: rem(200);
-  overflow: scroll;
-}
 
 .main__directory--link {
   text-decoration: none;
@@ -42,7 +38,7 @@
   color: $color-white;
   width: rem(100);
   margin: 0 auto;
-  padding: 2%;
+  padding: 8%;
   border-radius: rem(10);
   font-weight: bold;
   &:hover {
@@ -50,8 +46,15 @@
     border: rem(3) solid $color-orange;
     color: $color-orange;
   }
+  @media all and (min-width: 768px){
+    padding: 3%;
+  }
+  @media all and (min-width: 1024px){
+   padding: 2%; 
+  }
 }
 
 .card__title {
   text-transform: capitalize;
+  text-align: center;
 }
