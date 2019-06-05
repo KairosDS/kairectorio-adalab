@@ -13,7 +13,7 @@
   justify-content:space-between;
   @media all and (min-width: 768px){
     width: 500px;
-    min-height: 12rem;
+    min-height: 14rem;
   }
 }
 
@@ -25,7 +25,6 @@
 .card__description {
   color: $color-light-grey;
   align-self: center;
-  height: 200px;
 }
 
 .main__directory--link {
@@ -47,5 +46,6 @@
 
 .card__title {
   text-transform: capitalize;
+  text-align: center;
 }
 

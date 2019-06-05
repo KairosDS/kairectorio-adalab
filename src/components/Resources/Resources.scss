@@ -26,7 +26,7 @@
 }
 
 .nav__bar {
-  color: white;
+  color: $color-white;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -35,7 +35,7 @@
   margin: 0 auto;
   transition: all .2s ease-in-out;
   a {
-    color: white;
+    color: $color-white;
     text-decoration: none;
     &:hover {
       transform: scale(1.1);
