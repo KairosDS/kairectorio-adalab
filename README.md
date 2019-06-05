@@ -24,18 +24,21 @@ _A continuación puedes ver la estructura de sus componentes:_
 ```
 /
 `- _src
-   |- components
-   |  |- BackButton
-   |  |- Card
-   |  |- CardDetail
-   |  |- CardKairectory
-   |  |- CardResource
-   |  |- Footer
-   |  |- Header
-   |  |- Home
-   |  |- Kairectory
-   |  |- Resources
-   |- img
+   ├── components
+   │    ├── BackButton
+   │    ├── Card
+   │    ├── CardDetail
+   │    ├── CardKairectory
+   │    ├── CardResource
+   │    ├── Footer
+   │    ├── Header
+   │    ├── Home
+   │    ├── Kairectory
+   │    ├── Loader
+   │    ├── Resources
+   │    ├── Search
+   │    └── styles
+   ├── img
    App.js
    App.scss
    index.js
