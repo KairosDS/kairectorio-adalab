@@ -6,10 +6,10 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  @media all and (min-width: rem(768px)) {
+  @media all and (min-width: rem(768)) {
     margin: auto;
   }
-  @media all and (min-width: rem(1280px)) {
+  @media all and (min-width: rem(1280)) {
     width: 80%;
   }
 }
@@ -18,14 +18,18 @@
 }
 
 .nav__bar__container {
+  height: 7rem;
   display: flex;
   align-items: center;
   width: 100%;
-  height: rem(50);
   background: rgba(87, 87, 86, .7);
+  @media all and (min-width: rem(768)){
+    height: rem(60);
+  }
 }
 
 .nav__bar {
+  flex-direction: column;
   color: $color-white;
   display: flex;
   align-items: center;
@@ -34,9 +38,16 @@
   max-width: 80%;
   margin: 0 auto;
   transition: all .2s ease-in-out;
+  @media all and (min-width: rem(768)) {
+    flex-direction: row;
+  }
   a {
     color: $color-white;
     text-decoration: none;
+    margin-bottom: 23px;
+    @media all and (min-width: rem(768)){
+      margin-bottom: 0;
+    }
     &:hover {
       transform: scale(1.1);
     }
@@ -44,4 +55,11 @@
       color: $color-light-orange;
     }
   }
+}
+
+.search__input {
+  height: 30px;
+  border-radius: 10px;
+  padding: 0 5px;
+  border: 2px solid white;
 }
