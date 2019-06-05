@@ -6,7 +6,7 @@ class backButton extends React.Component {
     render () {
         const {route} = this.props;
         return(
-            <Link to={route}><i className="fas fa-arrow-left"></i> Volver</Link>
+            <Link to={route} title="Volver atrás"><i className="fas fa-arrow-left"></i> Volver</Link>
         );
     }
 }

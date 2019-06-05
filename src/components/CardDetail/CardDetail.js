@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 class CardDetail extends React.Component {
   render() {
-    const{description, url}= this.props;
+    const{title, description, url}= this.props;
     return (
       <div className="directory__wrapper--final">
           <div className="card__icon">
@@ -16,6 +16,7 @@ class CardDetail extends React.Component {
           target="_blank"
           rel="noopener noreferrer"
           href={url}
+          title={`Ir a ${title}`}
         >
           Ir al recurso
         </a>
@@ -25,6 +26,7 @@ class CardDetail extends React.Component {
 }
 
 CardDetail.propTypes = {
+  title: PropTypes.string,
   description: PropTypes.string,
   url: PropTypes.string
 }

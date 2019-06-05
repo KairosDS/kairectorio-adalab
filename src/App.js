@@ -83,7 +83,7 @@ class App extends React.Component {
       searchValue: trigger
     })
   }
-  
+
   render() {
     const { categories, kairos, laboral, desarrollo, agile, chosenCategory, searchValue } = this.state;
     return (
@@ -94,7 +94,9 @@ class App extends React.Component {
             <Route
               exact path="/"
               render={() => (
-                <Home categories={categories}/>
+                <Home
+                  categories={categories}
+                />
               )}
             />
               <Route

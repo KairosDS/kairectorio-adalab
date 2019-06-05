@@ -11,7 +11,13 @@ class CardResource extends React.Component{
       <div className="directory__wrapper--card">
         <div className="card__wraper__space">
           <h2 className="title">{title}</h2>
-          <Link className="btn__detail" to={`/card/${title}`} id={category} onClick={identifyCategory}>Más información</Link>
+          <Link
+            className="btn__detail"
+            to={`/card/${title}`}
+            id={category}
+            title={`Ir a ${title}`}
+            onClick={identifyCategory}>Más información
+          </Link>
         </div>
       </div>
     );
