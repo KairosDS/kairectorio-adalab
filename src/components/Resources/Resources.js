@@ -2,7 +2,9 @@ import React from 'react';
 import './Resources.scss';
 import CardResource from '../CardResource/CardResource';
 import BackButton from "../BackButton/BackButton";
+import Search from '../Search/Search';
 import PropTypes from 'prop-types';
+
 
 class Resources extends React.Component {
   componentDidMount() {
@@ -12,7 +14,7 @@ class Resources extends React.Component {
   }
 
   render(){
-    const {kairos, laboral, desarrollo, agile, identifyCategory, match} = this.props;
+    const {kairos, laboral, desarrollo, agile, identifyCategory, match, handleSearchInput, searchValue} = this.props;
     const category = match.params.category;
     const chooseCategory = () => {
       const {match} = this.props;
@@ -31,8 +33,17 @@ class Resources extends React.Component {
     const chosenCategory = chooseCategory();
     return(
       <React.Fragment>
+
+        <div className="nav__bar__container">
+          <div className="nav__bar">
+            <BackButton route="/" />
+            <Search handleSearchInput={handleSearchInput} />
+          </div>
+        </div>
+
         <ul className="resources__list">
           {chosenCategory
+          .filter(item => item.title.toLowerCase().includes(searchValue))
           .filter(item => item.url !== '' ? item : false)
           .map((item,index) => {
             return (
@@ -42,7 +53,6 @@ class Resources extends React.Component {
             )
           })}
         </ul>
-        <BackButton route="/" />
       </React.Fragment>
 
     )

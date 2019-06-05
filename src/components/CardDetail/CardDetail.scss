@@ -1,7 +1,6 @@
 @import '../styles/variables.scss';
 
 .directory__wrapper--final {
-  width: 500px;
   height: 16rem;
   border: $color-orange solid 5px;
   background-color: $color-white;
@@ -14,6 +13,10 @@
   flex-direction: column;
   justify-content:space-between;
   box-shadow: 5px 10px 10px $color-shadow;
+  box-shadow: 10px 10px 60px -19px rgba(0,0,0,0.75);
+  @media all and (min-width: 768px){
+    width: 500px;
+  }
 }
 
 .card__icon {
@@ -24,6 +27,8 @@
 .card__description {
   color: $color-light-grey;
   align-self: center;
+  height: 200px;
+  overflow: scroll;
 }
 
 .main__directory--link {
