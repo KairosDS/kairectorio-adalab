@@ -53,7 +53,11 @@ class Card extends React.Component {
                 return (
                   <div className="card__container--final" key={index}>
                     <h3 className="card__title">{item.title}</h3>
-                    <CardDetail description={item.description} url={item.url} />
+                    <CardDetail
+                      description={item.description}
+                      url={item.url}
+                      title={item.title}
+                      />
                   </div>
                 );
               })
@@ -71,6 +75,7 @@ Card.propTypes = {
   laboral: PropTypes.array,
   desarrollo: PropTypes.array,
   agile: PropTypes.array,
+  title: PropTypes.string,
   match: PropTypes.object,
   chosenCategory: PropTypes.string,
   fetchResources: PropTypes.func
