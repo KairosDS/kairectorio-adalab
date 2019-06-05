@@ -1,9 +1,11 @@
+@import "../styles/functions.scss";
+
 .main-header {
   width: 100%;
-  height: 88px;
+  height: rem(88);
   .main-header__logo {
-    max-width: 1400px;
-    @media all and (min-width: 1200px){
+    max-width: rem(1400);
+    @media all and (min-width: rem(1200)) {
       margin: 0 auto;
     }
   }

@@ -1,4 +1,5 @@
-@import '../styles/variables.scss';
+@import "../styles/variables.scss";
+@import "../styles/functions.scss";
 
 .directory__wrapper--final {
   height: 16rem;
@@ -8,12 +9,12 @@
   padding: 1.5rem 0;
   text-align: center;
   border-radius: 1rem;
-  padding: 24px 21px;
-  display:flex;
+  padding: rem(24) rem(21);
+  display: flex;
   flex-direction: column;
-  justify-content:space-between;
-  @media all and (min-width: 768px){
-    width: 500px;
+  justify-content: space-between;
+  @media all and (min-width: rem(768)) {
+    width: rem(500);
   }
 }
 
@@ -25,23 +26,23 @@
 .card__description {
   color: $color-light-grey;
   align-self: center;
-  height: 200px;
+  height: rem(200);
   overflow: scroll;
 }
 
 .main__directory--link {
   text-decoration: none;
   background: $color-orange;
-  border: 3px solid $color-white;
+  border: rem(3) solid $color-white;
   color: $color-white;
-  width: 100px;
+  width: rem(100);
   margin: 0 auto;
   padding: 2%;
-  border-radius: 10px;
+  border-radius: rem(10);
   font-weight: bold;
-  &:hover{
+  &:hover {
     background: $color-white;
-    border: 3px solid $color-orange;
+    border: rem(3) solid $color-orange;
     color: $color-orange;
   }
 }
@@ -49,4 +50,3 @@
 .card__title {
   text-transform: capitalize;
 }
-
