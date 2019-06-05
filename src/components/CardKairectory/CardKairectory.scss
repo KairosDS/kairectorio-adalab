@@ -1,0 +1,42 @@
+@import "../styles/variables.scss";
+@import "../styles/functions.scss";
+
+.icon__title {
+  text-transform: uppercase;
+}
+
+.icon__container {
+  width: rem(40);
+  height: rem(40);
+  border-radius: 50%;
+  border: rem(5) solid $color-orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-chevron-right {
+  color: $color-orange;
+}
+
+.directory__wrapper--card {
+  width: rem(210);
+  height: 16rem;
+  border: $color-orange solid 5px;
+  background-color: $color-white;
+  margin: 1.5rem 0.7rem;
+  padding: 1.5rem 0;
+  text-align: center;
+  border-radius: 1rem;
+  box-shadow: rem(5) rem(10) rem(10) $color-shadow;
+}
+
+.card__wrapper {
+  width: rem(150);
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

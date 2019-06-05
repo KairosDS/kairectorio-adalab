@@ -1,7 +1,6 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
- 
 conf = {
   port: process.env.PORT || process.argv[2] || 3000,
   originUndefined: function (req, res, next) {
@@ -138,6 +137,12 @@ const db = {
     ]
   }
 };
+
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 
 app.get('/', function (req, res) {
 	res.json({ "kairectorio": "API REST" });

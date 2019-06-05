@@ -1,0 +1,18 @@
+@import "../styles/functions.scss";
+
+.main-header {
+  width: 100%;
+  height: rem(88);
+  .main-header__logo {
+    max-width: rem(1400);
+    text-align: center;
+    @media all and (min-width: rem(768)) {
+      text-align: left;
+      margin-left: rem(50);
+    }
+  }
+  .logo__img {
+    padding: 1.2rem 0.7rem;
+    width: 9rem;
+  }
+}

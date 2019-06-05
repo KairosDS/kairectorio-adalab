@@ -1,0 +1,69 @@
+@import "../styles/variables.scss";
+@import "../styles/functions.scss";
+
+.main__directory--wrapper {
+  padding: 1.5rem;
+  padding: 3rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: rem(1400);
+  margin: 0 auto;
+}
+
+.card__container--final {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card__title {
+  color: $color-dark-grey;
+  padding-bottom: 0.75rem;
+  font-size: rem(24);
+}
+
+.card__info {
+  display: none;
+  @media (hover: hover) {
+    display: block;
+    padding: 0.8rem 0.8rem 0 0.8rem;
+    color: $color-orange;
+  }
+}
+
+.card__more-info {
+  display: none;
+  @media (hover: hover) {
+    max-width: 30rem;
+    height: 0;
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    z-index: 99999999999;
+    opacity: 0;
+  }
+}
+
+.card__info:hover {
+  @media (hover: hover) {
+    color: $color-light-orange;
+  }
+}
+
+.more-info__text {
+  padding-bottom: 1rem;
+}
+
+.projects:hover .card__more-info {
+  @media (hover: hover) {
+    opacity: 1;
+    height: auto;
+    background-color: $color-light-orange;
+    padding: 1.2rem;
+    line-height: 1.3;
+    text-align: left;
+    border-radius: 1rem;
+    color: $color-light-grey;
+  }
+}

@@ -1,0 +1,44 @@
+@import "../src/components/styles/functions.scss";
+
+.main {
+  font-family: "Open Sans", sans-serif;
+  /* header 88 y footer 3 */
+  min-height: calc(100vh - rem(88) - 3rem);
+  background-color: #e8e8e8;
+  @media all and (min-width: rem(1200)) {
+    /* 88 por el header y 6 por footer  */
+    min-height: calc(100vh - 88px - 6rem);
+  }
+}
+
+.bold-text {
+  font-weight: bold;
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.directory__wrapper--card {
+  width: rem(210);
+  height: 16rem;
+  border: #ff7900 solid rem(5);
+  background-color: #ffffff;
+  margin: 1.5rem 0.7rem;
+  padding: 1.5rem 0;
+  text-align: center;
+  border-radius: 1rem;
+}
+
+.card__wrapper {
+  width: rem(150);
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

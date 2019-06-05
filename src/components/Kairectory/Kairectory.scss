@@ -1,0 +1,15 @@
+@import "../styles/variables.scss";
+@import "../styles/functions.scss";
+
+.category__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.category__link {
+  color: $color-black;
+  font-weight: bold;
+  font-size: rem(24);
+  text-decoration: none;
+}

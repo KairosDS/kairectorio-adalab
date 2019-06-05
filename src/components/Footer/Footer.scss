@@ -1,0 +1,39 @@
+@import "../styles/variables.scss";
+@import "../styles/functions.scss";
+
+.footer {
+  width: 100%;
+  height: 3rem;
+  border-top: rem(2) solid $color-orange;
+  background-color: $color-white;
+  @media all and (min-width: rem(1200)) {
+    height: 6rem;
+  }
+}
+
+.main__footer--masinfo {
+  text-align: center;
+  padding: 1em;
+  @media all and (min-width: rem(768)) {
+    text-align: right;
+    margin-right: rem(50);
+  }
+}
+
+.main__footer--masinfo a {
+  color: $color-orange;
+  font-weight: bolder;
+}
+
+.footer__logo--img {
+  display: block;
+  width: 2rem;
+  height: auto;
+  margin: 0 auto;
+  padding: 0.5rem;
+  @media all and (min-width: rem(1200)) {
+    width: 4rem;
+    height: auto;
+    padding: 1rem;
+  }
+}

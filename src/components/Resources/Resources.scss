@@ -1,0 +1,65 @@
+@import '../styles/variables.scss';
+@import "../styles/functions.scss";
+
+.resources__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  @media all and (min-width: rem(768)) {
+    margin: auto;
+  }
+  @media all and (min-width: rem(1200)) {
+    width: 80%;
+  }
+}
+.title{
+  text-transform: capitalize;
+}
+
+.nav__bar__container {
+  height: 7rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: rgba(87, 87, 86, .7);
+  @media all and (min-width: rem(768)){
+    height: rem(60);
+  }
+}
+
+.nav__bar {
+  flex-direction: column;
+  color: $color-white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 70%;
+  max-width: 80%;
+  margin: 0 auto;
+  transition: all .2s ease-in-out;
+  @media all and (min-width: rem(768)) {
+    flex-direction: row;
+  }
+  a {
+    color: $color-white;
+    text-decoration: none;
+    margin-bottom: rem(23);
+    @media all and (min-width: rem(768)){
+      margin-bottom: 0;
+    }
+    &:hover {
+      transform: scale(1.1);
+    }
+    &:focus{
+      color: $color-light-orange;
+    }
+  }
+}
+
+.search__input {
+  height: rem(30);
+  border-radius: rem(10);
+  padding: 0 rem(5);
+  border: rem(2) solid white;
+}

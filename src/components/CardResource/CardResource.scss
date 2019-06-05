@@ -1,0 +1,25 @@
+@import "../styles/variables.scss";
+@import "../styles/functions.scss";
+
+.card__wraper__space {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0 10%;
+}
+
+.btn__detail {
+  background: $color-orange;
+  color: $color-white;
+  font-weight: bold;
+  padding: rem(10);
+  border-radius: rem(10);
+  text-decoration: none;
+  border: rem(3) solid $color-white;
+  &:hover {
+    background: $color-white;
+    color: $color-orange;
+    border: rem(3) solid $color-orange;
+  }
+}
