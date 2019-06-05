@@ -5,11 +5,10 @@
   justify-content: center;
   align-items: center;
   @media all and (min-width: 768px) {
-    width: 70%;
     margin: auto;
   }
   @media all and (min-width: 1280px) {
-    width: 100%;
+    width: 80%;
     margin: auto;
   }
 }

@@ -34,13 +34,19 @@
   color: $color-white;
   width: 100px;
   margin: 0 auto;
-  padding: 2%;
+  padding: 8%;
   border-radius: 10px;
   font-weight: bold;
   &:hover{
     background: $color-white;
     border: 3px solid $color-orange;
     color: $color-orange;
+  }
+  @media all and (min-width: 768px){
+    padding: 3%;
+  }
+  @media all and (min-width: 1024px){
+   padding: 2%; 
   }
 }
 
