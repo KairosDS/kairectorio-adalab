@@ -1,15 +1,16 @@
+@import '../styles/variables.scss';
+@import "../styles/functions.scss";
+
 .resources__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  @media all and (min-width: 768px) {
-    width: 70%;
+  @media all and (min-width: rem(768px)) {
     margin: auto;
   }
-  @media all and (min-width: 1280px) {
-    width: 100%;
-    margin: auto;
+  @media all and (min-width: rem(1280px)) {
+    width: 80%;
   }
 }
 .title{
@@ -20,24 +21,27 @@
   display: flex;
   align-items: center;
   width: 100%;
-  height: 50px;
+  height: rem(50);
   background: rgba(87, 87, 86, .7);
 }
 
 .nav__bar {
-  color: white;
+  color: $color-white;
   display: flex;
   align-items: center;
   justify-content: space-between;
   min-width: 70%;
   max-width: 80%;
   margin: 0 auto;
-
+  transition: all .2s ease-in-out;
   a {
-    color: white;
+    color: $color-white;
     text-decoration: none;
     &:hover {
-      color: #FF7900;
+      transform: scale(1.1);
+    }
+    &:focus{
+      color: $color-light-orange;
     }
   }
 }

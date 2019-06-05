@@ -44,7 +44,11 @@ class Card extends React.Component {
 
     return (
       <React.Fragment>
-        <BackButton route={`/resources/${chosenCategory}`} />
+        <div className="nav__bar__container">
+          <div className="nav__bar">
+            <BackButton route={`/resources/${chosenCategory}`} />
+          </div>
+        </div>
         <div className="main__directory--wrapper">
           {array.length > 0 ? (
             array
