@@ -13,12 +13,15 @@ class Kairectory extends React.Component {
           {categories.map((item, index) => {
             return (
               <Link
+                title={`Ir a ${item}`}
                 key={index}
                 className="category__link"
                 to={`/resources/${item}`}
               >
                 <li>
-                  <CardKairectory item={item}/>
+                  <CardKairectory
+                    item={item}
+                    />
                 </li>
               </Link>
             );

@@ -17,7 +17,9 @@ class Home extends React.Component {
           </div>
         </section>
         <section className="main__directory">
-          <Kairectory categories={categories} />
+          <Kairectory
+            categories={categories}
+          />
         </section>
       </div>
     );

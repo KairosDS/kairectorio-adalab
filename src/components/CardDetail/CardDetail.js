@@ -16,7 +16,7 @@ class CardDetail extends React.Component {
           target="_blank"
           rel="noopener noreferrer"
           href={url}
-          title={`Ir a link de ${title}`}
+          title={`Ir a ${title}`}
         >
           Ir al recurso
         </a>
