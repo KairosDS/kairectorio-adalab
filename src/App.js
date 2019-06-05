@@ -16,11 +16,13 @@ class App extends React.Component {
       laboral: [],
       desarrollo: [],
       agile: [],
-      chosenCategory: ''
+      chosenCategory: '',
+      searchValue: ''
 
     };
     this.fetchResources = this.fetchResources.bind(this);
     this.identifyCategory = this.identifyCategory.bind(this);
+    this.handleSearchInput = this.handleSearchInput.bind(this);
   }
 
   saveCategory(category) {
@@ -65,8 +67,15 @@ class App extends React.Component {
     this.setState({chosenCategory: category});
   }
 
+  handleSearchInput(event){
+    const trigger = event.currentTarget.value;
+    this.setState({
+      searchValue: trigger
+    })
+  }
+  
   render() {
-    const { categories, kairos, laboral, desarrollo, agile, chosenCategory } = this.state;
+    const { categories, kairos, laboral, desarrollo, agile, chosenCategory, searchValue } = this.state;
     return (
       <div className="App">
         <Header />
@@ -90,6 +99,8 @@ class App extends React.Component {
                     desarrollo={desarrollo}
                     agile={agile}
                     identifyCategory={this.identifyCategory}
+                    searchValue={searchValue}
+                    handleSearchInput={this.handleSearchInput}
                   />
                 )}
               />

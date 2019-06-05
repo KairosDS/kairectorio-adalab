@@ -25,14 +25,23 @@ _A continuación puedes ver la estructura de sus componentes:_
 /
 `- _src
    |- components
+   |  |- BackButton
    |  |- Card
+   |  |- CardDetail
+   |  |- CardKairectory
+   |  |- CardResource
    |  |- Footer
    |  |- Header
    |  |- Home
    |  |- Kairectory
    |  |- Resources
    |- img
-   |- stylesheets
+   App.js
+   App.scss
+   index.js
+   index.scss
+   style.scss
+
 
 ```
 
