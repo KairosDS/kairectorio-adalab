@@ -11,9 +11,12 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      categories: [],
-      kairos: [],
-      laboral: [],
+      categories: {
+        isLoading: false,
+        data: []
+      },
+      kairos:[],
+      laboral:[],
       desarrollo: [],
       agile: [],
       chosenCategory: '',
@@ -38,13 +41,20 @@ class App extends React.Component {
   fetchCategories() {
     const url = "https://kairectorio.herokuapp.com/";
     const newUrl = url + "categories";
+    this.setState ({
+      categories: {
+        isLoading : true
+      }
+    })
     fetch(newUrl)
       .then(response => response.json())
       .then(data => {
 
         this.setState({
-          categories: data
-        });
+          categories: {
+            isLoading: false,
+            data: data
+        }});
       });
   }
 

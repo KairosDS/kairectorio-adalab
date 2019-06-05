@@ -40,7 +40,6 @@ class Resources extends React.Component {
             <Search handleSearchInput={handleSearchInput} />
           </div>
         </div>
-
         <ul className="resources__list">
           {chosenCategory
           .filter(item => item.title.toLowerCase().includes(searchValue))
@@ -54,7 +53,6 @@ class Resources extends React.Component {
           })}
         </ul>
       </React.Fragment>
-
     )
   }
 }

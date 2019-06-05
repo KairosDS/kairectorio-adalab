@@ -2,6 +2,7 @@ import React from "react";
 import './Home.scss';
 import Kairectory from "../Kairectory/Kairectory";
 import PropTypes from 'prop-types';
+import Loader from '../Loader/Loader';
 
 class Home extends React.Component {
   render() {
@@ -17,7 +18,12 @@ class Home extends React.Component {
           </div>
         </section>
         <section className="main__directory">
-          <Kairectory categories={categories} />
+          {categories.isLoading === true 
+          ?
+            <Loader />
+          :
+            <Kairectory categories={categories.data} />
+        }
         </section>
       </div>
     );
@@ -25,7 +31,7 @@ class Home extends React.Component {
 }
 
 Home.propTypes = {
-  categories: PropTypes.array
+  categories: PropTypes.object
 }
 
 export default Home;
