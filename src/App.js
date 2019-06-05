@@ -11,7 +11,10 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      categories: [],
+      categories: {
+        isLoading: true,
+        data: []
+      },
       kairos: [],
       laboral: [],
       desarrollo: [],
@@ -43,8 +46,10 @@ class App extends React.Component {
       .then(data => {
 
         this.setState({
-          categories: data
-        });
+          categories: {
+            isLoading: false,
+            data: data
+        }});
       });
   }
 
@@ -93,7 +98,7 @@ class App extends React.Component {
                   <Resources
                     fetchResources = {this.fetchResources}
                     match={props.match}
-                    categories={categories}
+                    categories={categories.data}
                     kairos={kairos}
                     laboral={laboral}
                     desarrollo={desarrollo}
