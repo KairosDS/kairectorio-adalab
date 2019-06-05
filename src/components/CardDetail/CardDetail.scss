@@ -15,6 +15,11 @@
   justify-content: space-between;
   @media all and (min-width: rem(768)) {
     width: rem(500);
+  justify-content:space-between;
+  box-shadow: 5px 10px 10px $color-shadow;
+  box-shadow: 10px 10px 60px -19px rgba(0,0,0,0.75);
+  @media all and (min-width: rem(768)) {
+    width: rem(500);
   }
 }
 
