@@ -45,7 +45,7 @@
   font-size: rem(24);
   font-weight: bold;
   line-height: 32px;
-  @media all and {
+  @media all and (min-width: rem(1200)) {
     padding-bottom: 5rem;
   }
 }
