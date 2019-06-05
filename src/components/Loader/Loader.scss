@@ -1,6 +1,11 @@
+.loader__wrapper {
+  height: 100px;
+  width: 100%;
+}
+
 .loader__img {
   width: 60px;
-  margin: 0 auto;
+  margin: 20px auto;
   display: block;
   animation-name: loader-rotate;
   animation-duration: 1s;

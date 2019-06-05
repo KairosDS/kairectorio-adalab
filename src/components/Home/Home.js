@@ -22,7 +22,7 @@ class Home extends React.Component {
           ?
             <Loader />
           :
-            <Kairectory categories={categories} />
+            <Kairectory categories={categories.data} />
         }
         </section>
       </div>
@@ -31,7 +31,7 @@ class Home extends React.Component {
 }
 
 Home.propTypes = {
-  categories: PropTypes.array
+  categories: PropTypes.object
 }
 
 export default Home;
