@@ -2,7 +2,7 @@
 @import "../styles/functions.scss";
 
 .directory__wrapper--final {
-  border: $color-orange solid 5px;
+  border: $color-orange solid rem(5);
   background-color: $color-white;
   margin: 1.5rem 0.7rem;
   padding: 1.5rem 0;
@@ -47,10 +47,10 @@
     border: rem(3) solid $color-orange;
     color: $color-orange;
   }
-  @media all and (min-width: 768px){
+  @media all and (min-width: rem(768)){
     padding: 3%;
   }
-  @media all and (min-width: 1024px){
+  @media all and (min-width: rem(1200)){
    padding: 2%; 
   }
 }
