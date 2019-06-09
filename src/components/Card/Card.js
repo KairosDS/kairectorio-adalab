@@ -35,7 +35,11 @@ class Card extends React.Component {
     }
   }
 
-  componentDidMount() {
+  // componentDidMount() {
+  //   this.array = this.isCategory(this.props.chosenCategory);
+  // }
+
+  componentWillMount() {
     this.array = this.isCategory(this.props.chosenCategory);
   }
 
