@@ -5,42 +5,43 @@ import BackButton from "../BackButton/BackButton";
 import PropTypes from "prop-types";
 
 class Card extends React.Component {
+  constructor() {
+    super();
+    this.array = []; // creo las propiedades de la clase
+  }
+
+  chooseCategory(id) {
+    if (id === "kairos") {
+      return this.props.kairos;
+    } else if (id === "laboral") {
+      return this.props.laboral;
+    } else if (id === "desarrollo") {
+      return this.props.desarrollo;
+    } else {
+      return this.props.agile;
+    }
+  }
+
+  isCategory(chosenCategory) {
+    if (chosenCategory !== "") {
+      this.props.fetchResources(chosenCategory);
+      const array = this.chooseCategory(chosenCategory);
+      console.log("categoria", chosenCategory);
+      return array;
+    } else {
+      const array = [];
+      console.log("no tengo categoria");
+      return array;
+    }
+  }
+
+  componentDidMount() {
+    this.array = this.isCategory(this.props.chosenCategory);
+  }
+
   render() {
-    const {
-      kairos,
-      laboral,
-      desarrollo,
-      agile,
-      match,
-      chosenCategory,
-      fetchResources
-    } = this.props;
+    const { match, chosenCategory } = this.props;
     const id = match.params.id;
-
-    const chooseCategory = id => {
-      if (id === "kairos") {
-        return kairos;
-      } else if (id === "laboral") {
-        return laboral;
-      } else if (id === "desarrollo") {
-        return desarrollo;
-      } else {
-        return agile;
-      }
-    };
-
-    const isCategory = chosenCategory => {
-      if (chosenCategory !== "") {
-        fetchResources(chosenCategory);
-        const array = chooseCategory(chosenCategory);
-        return array;
-      } else {
-        const array = [];
-        return array;
-      }
-    };
-
-    const array = isCategory(chosenCategory);
 
     return (
       <React.Fragment>
@@ -50,8 +51,8 @@ class Card extends React.Component {
           </div>
         </div>
         <div className="main__directory--wrapper">
-          {array.length > 0 ? (
-            array
+          {this.array.length > 0 ? (
+            this.array
               .filter(item => (item.title.includes(id) ? item : false))
               .map((item, index) => {
                 return (
@@ -61,7 +62,7 @@ class Card extends React.Component {
                       description={item.description}
                       url={item.url}
                       title={item.title}
-                      />
+                    />
                   </div>
                 );
               })
